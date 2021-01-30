@@ -15,6 +15,7 @@ My wife suggested building an app that would allow an overstressed parent to qui
 - Front-End: HTML, CSS, JS
 - Back-End: NODE.JS (EXPRESS, PASSPORT), MONGO DB ATLAS, MONGOOSE,
 - Development: GIT, GITHUB, DRAW.IO, TRELLO
+- Resources: [Water.css](https://watercss.kognise.dev/)
 
 ### GETTING STARTED
 
