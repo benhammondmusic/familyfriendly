@@ -1,0 +1,29 @@
+{
+  "name": "familyfriendly",
+  "version": "1.0.0",
+  "description": "find and rate family friendly reststops",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "family",
+    "kids",
+    "potty",
+    "bathroom",
+    "family",
+    "friendly",
+    "road",
+    "trip",
+    "travel",
+    "car"
+  ],
+  "author": "Ben Hammond, Julie Hammond",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.11.14",
+    "session": "^0.1.0"
+  }
+}
