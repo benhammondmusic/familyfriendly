@@ -13,13 +13,14 @@ My wife suggested building an app that would allow an overstressed parent to qui
 ### TECH USED
 
 - Front-End: HTML, CSS, JS
-- Back-End: NODE.JS (EXPRESS, PASSPORT), MONGODB ATLAS, MONGOOSE,
+- Back-End: NODE.JS (EXPRESS, PASSPORT), MONGO DB ATLAS, MONGOOSE,
 - Development: GIT, GITHUB, DRAW.IO, TRELLO
 
 ### GETTING STARTED
 
 Site should load in any modern browser but was developed using Chrome. The layout is designed primarily for mobile, since parents will be using the app on the go.
 
-- Launch [Family Friendly](https://github.com/benhammondmusic)
+- Launch [Family Friendly]()
+- [GitHub Repo](https://github.com/benhammondmusic/familyfriendly)
 
 ### NEXT STEPS
