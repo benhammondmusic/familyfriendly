@@ -2,7 +2,7 @@
 const db = require('../models');
 
 const showRegisterForm = (req, res) => {
-  res.render('user/register');
+  res.render('users/register');
 };
 
 const register = (req, res) => {
@@ -10,7 +10,7 @@ const register = (req, res) => {
 };
 
 const showLoginForm = (req, res) => {
-  res.render('user/login');
+  res.render('users/login');
 };
 
 const login = (req, res) => {
