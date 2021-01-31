@@ -1,14 +1,10 @@
 const passport = require('passport');
 const express = require('express');
 const router = express.Router();
+const ctrls = require('../controllers');
 
-// ! Should move to index ctrl
 // Homepage
-router.get('/', function (req, res) {
-  res.render('index', {
-    user: req.user,
-  });
-});
+router.get('/', ctrls.index);
 
 // Google OAuth login route
 router.get('/auth/google', passport.authenticate('google', { scope: ['profile', 'email'] }));

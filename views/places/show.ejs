@@ -1,6 +1,7 @@
 <%- include('../partials/top.ejs') %>
 <h2>SHOW ALL PLACES</h2>
-<p>Logged in as <%= context.user.email %></p>
+<p>Logged in as <%= context.user.name %></p>
+<% console.log(context); %>
 <em><%= context.name %></em>
 <%- include('../partials/bottom.ejs') %>
 

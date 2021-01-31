@@ -1,3 +1,11 @@
+connect database for adding users
+database for places
+create report card models
+connect to database report cards
+logic to calculate avg ratings
+view to display spots
+get user geo location, show on map with nearby places
+
 ##### USER STORIES
 
 - A non-logged in user can only view a list of places, and those places' report cards

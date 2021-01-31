@@ -2,6 +2,7 @@
 const db = require('../models');
 
 const show = (req, res) => {
+  console.log(req.user);
   const context = { name: 'test place', user: req.user };
   res.render('places/show', { context });
 };

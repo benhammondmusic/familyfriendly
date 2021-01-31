@@ -5,7 +5,7 @@ require('dotenv').config();
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 
 // require('../models');
-const User = require('../models/user'); // ! fix index model
+const User = require('../models/user'); // ! fix to use index model
 // console.log(User, 'user model object');
 
 passport.use(
@@ -21,9 +21,11 @@ passport.use(
         if (err) return cb(err);
         // if found, return user object
         if (user) {
+          console.log('found existing user: ', user);
           return cb(null, user);
         } else {
           // we have a new user via OAuth!
+          console.log('adding new user: ', user);
           const newUser = new User({
             name: profile.displayName,
             email: profile.emails[0].value,

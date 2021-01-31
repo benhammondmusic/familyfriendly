@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema(
   {
-    username: {
+    name: {
       type: String,
       //   required: true,
     },
@@ -12,6 +12,9 @@ const userSchema = new mongoose.Schema(
     },
     avatarImg: {
       type: String, // href link to hosted image? could be stored in mongo ??
+    },
+    googleId: {
+      type: String,
     },
   },
   {
