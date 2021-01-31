@@ -16,7 +16,7 @@ passport.use(
       callbackURL: process.env.GOOGLE_CALLBACK,
     },
     function (accessToken, refreshToken, profile, cb) {
-      User.findOne({ authorGoogleId: profile.id }, function (err, user) {
+      User.findOne({ googleId: profile.id }, function (err, user) {
         // error finding user
         if (err) return cb(err);
         // if found, return user object
