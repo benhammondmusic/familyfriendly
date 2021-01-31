@@ -16,5 +16,6 @@ mongoose.connection.on('disconnected', (err) => console.log(err));
 
 // IMPORTS OTHER MODELS AND EXPORTS THEM FOR USE IN CONTROLLERS
 module.exports = {
-  User: require('./User'),
+  User: require('./user'),
+  Place: require('./place'),
 };

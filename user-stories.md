@@ -7,3 +7,5 @@
 - A user can add a report card for an existing place
 - A user can delete their own report card
 - A REPORT CARD can contain an optional Y/N to PLACE fields: POTTY? - TABLE M? - TABLE W? FRESH? NUM-NUMS? COFFEE? MASKS?
+
+https://trello.com/b/y4dMEE1k/project-2

@@ -4,7 +4,7 @@ const userSchema = new mongoose.Schema(
   {
     username: {
       type: String,
-      required: true,
+      //   required: true,
     },
     email: {
       type: String,
@@ -19,8 +19,7 @@ const userSchema = new mongoose.Schema(
   }
 );
 
-// CREATE MODEL
+// Compile schema into model (imported in index)
 const User = mongoose.model('User', userSchema);
 
-// EXPORT AND MAKE AVAILABLE IN INDEX MODEL
 module.exports = User;

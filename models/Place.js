@@ -10,28 +10,30 @@ const mongoose = require('mongoose');
 // - coffee score
 // - masked up score
 // geo location
+
+// * https://mongoosejs.com/docs/geojson.html
 const placeSchema = new mongoose.Schema(
   {
+    name: {
+      type: String,
+      required: true,
+    },
     location: {
-      name: {
-        type: String,
+      type: {
+        type: String, // Don't do `{ location: { type: String } }`
+        enum: ['Point'], // 'location.type' must be 'Point'
         required: true,
       },
-      lat: {
-        type: Number,
-      },
-      long: {
-        type: Number,
+      coordinates: {
+        type: [Number],
+        required: true,
       },
     },
   },
+
   {
     timestamps: true,
   }
 );
 
-// CREATE MODEL
-const User = mongoose.model('User', userSchema);
-
-// EXPORT AND MAKE AVAILABLE IN INDEX MODEL
-module.exports = User;
+module.exports = mongoose.model('Place', placeSchema);

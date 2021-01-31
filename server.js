@@ -5,9 +5,16 @@ const port = process.env.PORT || 3000;
 
 const methodOverride = require('method-override');
 const session = require('express-session');
+const passport = require('passport');
+require('dotenv').config();
 
 // REQUIRES ROUTES / INDEX WHICH IN TURN LOADS USER, PLACE, ETC
 const routes = require('./routes');
+
+// Connect to DB
+require('./config/database');
+// Connect to Passport
+require('./config/passport');
 
 // TO USE EJS FILES
 app.set('view engine', 'ejs');
@@ -16,11 +23,23 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
+app.use(express.json());
+
+// FOR OAUTH
+app.use(
+  session({
+    secret: 'Ben',
+    resave: false,
+    saveUninitialized: true,
+  })
+);
+
+//Be sure to mount it after the session middleware and always before any of your routes are mounted that would need access to the current user
+app.use(passport.initialize());
+app.use(passport.session());
 
 // ROUTES
-app.get('/', (req, res) => {
-  res.render('index/index'); // WELCOME PAGE
-});
+app.use('/', routes.index);
 app.use('/users', routes.users); // ALL USER PAGES
 app.use('/places', routes.places); // ALL USER PAGES
 
