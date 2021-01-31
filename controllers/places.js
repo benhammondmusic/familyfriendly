@@ -2,7 +2,8 @@
 const db = require('../models');
 
 const show = (req, res) => {
-  res.render('places/');
+  const context = { name: 'test place' };
+  res.render('places/show', { context });
 };
 
 module.exports = {
