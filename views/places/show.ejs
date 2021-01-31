@@ -1,7 +1,20 @@
 <%- include('../partials/top.ejs') %>
 <h2>SHOW ALL PLACES</h2>
 <p>Logged in as <%= context.user.name %></p>
-<% console.log(context); %>
-<em><%= context.name %></em>
+
+<!-- ADD A PLACE FORM -->
+<form action="places" method="POST">
+    <div>
+      <label for="name">Place Name</label>
+      <input name="name" id="name" value="">
+    </div>
+    <div>
+      <button>Add Place</button>
+    </div>
+    <div>
+      <%= context.places %>
+    </div>
+  </form>
+
 <%- include('../partials/bottom.ejs') %>
 

@@ -16,6 +16,18 @@ const userSchema = new mongoose.Schema(
     googleId: {
       type: String,
     },
+    authoredPlaces: [
+      {
+        type: mongoose.Types.ObjectId,
+        ref: 'Place',
+      },
+    ],
+    authoredReportCards: [
+      {
+        type: mongoose.Types.ObjectId,
+        ref: 'ReportCard',
+      },
+    ],
   },
   {
     timestamps: true,

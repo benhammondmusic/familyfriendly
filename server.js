@@ -38,6 +38,17 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.use((req, res, next) => {
+  console.log(`${req.method} ${req.originalUrl}`);
+  next();
+});
+
+// user authentication middleware
+app.use((req, res, next) => {
+  app.locals.currentUser = req.session.currentUser;
+  next();
+});
+
 // ROUTES
 app.use('/', routes.index);
 app.use('/users', routes.users); // ALL USER PAGES
