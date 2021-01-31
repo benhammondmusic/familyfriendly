@@ -34,7 +34,7 @@ app.use(
   })
 );
 
-//Be sure to mount it after the session middleware and always before any of your routes are mounted that would need access to the current user
+//after the session middleware /  before  routes that need access to current user
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -50,7 +50,7 @@ app.use((req, res, next) => {
 });
 
 // ROUTES
-app.use('/', routes.index);
+app.use('/', routes.index); // contains OAUTH routes
 app.use('/users', routes.users); // ALL USER PAGES
 app.use('/places', routes.places); // ALL USER PAGES
 

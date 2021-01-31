@@ -1,9 +1,11 @@
 <%- include('../partials/top.ejs') %>
-<h2>SHOW ALL PLACES</h2>
+<h2>ADD NEW PLACE</h2>
 <p>Logged in as <%= context.user.name %></p>
 
+
+
 <!-- ADD A PLACE FORM -->
-<form action="places" method="POST">
+<form action="/places" method="POST">
     <div>
       <label for="name">Place Name</label>
       <input name="name" id="name" value="">
@@ -11,10 +13,6 @@
     <div>
       <button>Add Place</button>
     </div>
-    <div>
-      <%= context.places %>
-    </div>
   </form>
 
 <%- include('../partials/bottom.ejs') %>
-

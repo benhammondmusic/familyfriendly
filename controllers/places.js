@@ -1,16 +1,33 @@
 // database index which imports places, users, etc
 const db = require('../models');
 
-const show = (req, res) => {
-  console.log(req.user);
-  const context = { name: 'test place', user: req.user };
-  res.render('places/show', { context });
+// GET - display MANY / ALL places
+const index = (req, res) => {
+  // find ALL places
+  db.Place.find({})
+    // fill in user details from ref USER documents
+    .populate('user')
+    // .sort({ createdAt: -1 })
+    .exec((err, places) => {
+      if (err) return console.log(err);
+
+      const context = { places, user: req.user };
+      console.log('context in ctrl.places.index before being sent to places/index view', context);
+      // send to places/index view
+      res.render('places/index', { context });
+    });
 };
 
+// GET - display form for USER to add NEW place
+const newPlaceForm = (req, res) => {
+  const context = { user: req.user };
+  res.render('places/new', { context });
+};
+
+// POST - create one new place
 const create = (req, res) => {
   console.log('CREATE PLACE');
   const userId = req.session;
-  console.log(req.session, 'session');
 
   // get place name from submitted form on POST /places
   const placeName = req.body.name;
@@ -21,8 +38,6 @@ const create = (req, res) => {
   //          "coordinates": [-73.97, 40.77]
   //      }
   //  });
-
-  console.log(placeName, 'place name');
 
   // create a new place
   db.Place.create(req.body, (err, createdPlace) => {
@@ -79,6 +94,7 @@ const create = (req, res) => {
 // };
 
 module.exports = {
-  show,
+  index,
+  newPlaceForm,
   create,
 };

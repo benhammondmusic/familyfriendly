@@ -1,0 +1,17 @@
+<%- include('../partials/top.ejs') %>
+<h2>ALL PLACES</h2>
+<p>Logged in as <%= context.user.name %></p>
+
+<div id="places-list">
+<ul>
+  <% context.places.forEach((place) => { %>
+    <li> <%= place.name %>  </li>
+    <% }) %>
+</ul>
+</div>
+
+<a href="places/new">Add A New Place</a>
+
+
+<%- include('../partials/bottom.ejs') %>
+
