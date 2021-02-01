@@ -10,6 +10,9 @@ router.get('/new', ctrls.places.newPlaceForm);
 // CREATE THE NEW PLACE
 router.post('/', ctrls.places.create);
 
+// VIEW SPECIFIC PLACE AND ITS INFO/REPORT CARDS
+router.get('/:id', ctrls.places.show);
+
 // DISPLAY FORM TO ADD NEW REPORT CARD FOR SPECIFIC PLACE
 router.get('/:id/reportcards/new', ctrls.reportCards.newReportCardForm);
 

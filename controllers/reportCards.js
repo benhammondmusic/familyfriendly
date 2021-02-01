@@ -47,12 +47,15 @@ const create = (req, res) => {
     // save to DB
     createdReportCard.save();
 
-    // send user and all report cards along to view
+    // send logged in user and PLACE that just received the report card
     const context = {
+      place: createdReportCard.place,
       user: req.user,
     };
 
-    res.render('reportcards/', context);
+    // display a place and all its info incl. filed report cards from all users
+    // res.render('places/show', context);
+    res.redirect(`/places/${req.params.id}`);
   });
 };
 
