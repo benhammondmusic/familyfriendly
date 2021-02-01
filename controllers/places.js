@@ -4,14 +4,15 @@ const db = require('../models');
 // GET - display MANY / ALL places
 const index = (req, res) => {
   // find ALL places
+  // fill in user details from ref USER documents
   db.Place.find({})
-    // fill in user details from ref USER documents
-    .populate('user')
-    // .sort({ createdAt: -1 })
+    .populate('authorUserId')
     .exec((err, places) => {
       if (err) return console.log(err);
 
       const context = { places, user: req.user };
+
+      // console.log(context.places[0].authorUserId, 'CONTEXT author user id');
       // send to places/index view
       res.render('places/index', { context });
     });
