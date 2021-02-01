@@ -2,17 +2,16 @@
 <h2>ADD NEW PLACE</h2>
 <p>Logged in as <%= context.user.name %></p>
 
-
-
 <!-- ADD A PLACE FORM -->
 <form action="/places" method="POST">
-    <div>
-      <label for="name">Place Name</label>
-      <input name="name" id="name" value="">
-    </div>
-    <div>
-      <button>Add Place</button>
-    </div>
-  </form>
+  <div>
+    <label for="name">Place Name:</label>
+    <input name="name" id="name" placeholder="e.g. Starbucks" />
+  </div>
+
+  <div>
+    <button>Add Place</button>
+  </div>
+</form>
 
 <%- include('../partials/bottom.ejs') %>

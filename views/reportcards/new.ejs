@@ -1,0 +1,59 @@
+<%- include('../partials/top.ejs') %>
+<h2>ADD NEW REPORT CARD</h2>
+<p>Logged in as <%= context.user.name %></p>
+
+<!-- ADD A PLACE FORM -->
+<form action="/places/:id/reportcards/" method="POST">
+  <ul>
+    <li>
+      <!--  -->
+      <input type="checkbox" id="hasPotty" name="hasPotty" value="Potty?" />
+      <label for="hasPotty">Has Potty?</label>
+    </li>
+    <li>
+      <!--  -->
+      <input type="checkbox" id="hasChangingTableW" name="hasChangingTableW" value="ChangingTableW?" />
+      <label for="hasChangingTableW">Has Changing Table in Womens Room?</label>
+    </li>
+    <li>
+      <!--  -->
+      <input type="checkbox" id="hasChangingTableM" name="hasChangingTableM" value="ChangingTableM?" />
+      <label for="hasChangingTableM">Has Changing Table in Mens Room?</label>
+    </li>
+    <li>
+      <!--  -->
+      <input type="checkbox" id="isClean" name="isClean" value="isClean?" />
+      <label for="isClean">Is Clean?</label>
+    </li>
+    <li>
+      <!--  -->
+      <input type="checkbox" id="hasSnacks" name="hasSnacks" value="hasSnacks?" />
+      <label for="hasSnacks">Has Snacks?</label>
+    </li>
+    <li>
+      <!--  -->
+      <input type="checkbox" id="hasCoffee" name="hasCoffee" value="hasCoffee?" />
+      <label for="hasCoffee">Has Coffee?</label>
+    </li>
+    <li>
+      <!--  -->
+      <input type="checkbox" id="kidsCanRunAround" name="kidsCanRunAround" value="kidsCanRunAround?" />
+      <label for="kidsCanRunAround">Kids Can Run Around?</label>
+    </li>
+    <li>
+      <!--  -->
+      <input type="checkbox" id="everyoneMasked" name="everyoneMasked" value="everyoneMasked?" />
+      <label for="everyoneMasked">Everyone Masked?</label>
+    </li>
+  </ul>
+  <div>
+    <label for="comment">Other Comment:</label>
+    <input name="comment" id="comment" value="e.g. Friendly!" />
+  </div>
+
+  <div>
+    <button>Submit Report</button>
+  </div>
+</form>
+
+<%- include('../partials/bottom.ejs') %>

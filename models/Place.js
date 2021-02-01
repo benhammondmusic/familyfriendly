@@ -1,16 +1,5 @@
 const mongoose = require('mongoose');
 
-// - report cards [refs]
-// display name
-// - potty score
-// - change table W
-// - change table M
-// - freshness score
-// - num num score
-// - coffee score
-// - masked up score
-// geo location
-
 // * https://mongoosejs.com/docs/geojson.html
 const placeSchema = new mongoose.Schema(
   {
@@ -18,6 +7,12 @@ const placeSchema = new mongoose.Schema(
       type: mongoose.Types.ObjectId,
       ref: 'User',
     },
+    reportCards: [
+      {
+        type: mongoose.Types.ObjectId,
+        ref: 'ReportCard',
+      },
+    ],
     name: {
       type: String,
       required: true,
@@ -26,6 +21,14 @@ const placeSchema = new mongoose.Schema(
       type: { type: String },
       coordinates: [Number],
     },
+    hasPottyScore: { type: Number, min: 0, max: 100 },
+    hasChangingTableWScore: { type: Number, min: 0, max: 100 },
+    hasChangingTableMScore: { type: Number, min: 0, max: 100 },
+    isCleanScore: { type: Number, min: 0, max: 100 },
+    hasSnacksScore: { type: Number, min: 0, max: 100 },
+    hasCoffeeScore: { type: Number, min: 0, max: 100 },
+    kidsCanRunAroundScore: { type: Number, min: 0, max: 100 },
+    everyoneMaskedScore: { type: Number, min: 0, max: 100 },
   },
 
   {

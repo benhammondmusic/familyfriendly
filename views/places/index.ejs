@@ -3,24 +3,22 @@
 <p>Logged in as <%= context.user.name %></p>
 
 <div id="places-list">
-<ul>
-  <% context.places.forEach((place) => { %>
-    <li> <%= place.name %>  
-    <ul>
-      <li> <%=place.loc.coordinates %> </li>
-      <li> <%=place.authorUserId.name %> </li>
-   
-
-    </ul>
-    
-    
+  <ul>
+    <% context.places.forEach((place) => { %>
+    <li>
+      <%= place.name %>
+      <ul>
+        <li><%=place.loc.coordinates %></li>
+        <li><%=place.authorUserId.name %></li>
+      </ul>
     </li>
+    <form action="places/<%=place._id%>/reportcards/new" method="GET">
+      <button>Submit Report Card</button>
+    </form>
     <% }) %>
-</ul>
+  </ul>
 </div>
 
 <a href="places/new">Add A New Place</a>
 
-
 <%- include('../partials/bottom.ejs') %>
-
