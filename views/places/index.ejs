@@ -5,7 +5,16 @@
 <div id="places-list">
 <ul>
   <% context.places.forEach((place) => { %>
-    <li> <%= place.name %>  </li>
+    <li> <%= place.name %>  
+    <ul>
+      <li> <%=place.loc.coordinates %> </li>
+      <% console.log(place); %>
+   
+
+    </ul>
+    
+    
+    </li>
     <% }) %>
 </ul>
 </div>
