@@ -3,46 +3,46 @@
 <p>Logged in as <%= user.name %></p>
 <hr />
 <!-- ADD A REPORT CARD FORM -->
-<form action="/places/:id/reportcards/" method="POST">
+<form action="/places/<%= place._id%>/reportcards/" method="POST">
   <ul>
     <li>
       <!--  -->
-      <input type="checkbox" id="hasPotty" name="hasPotty" value="Potty?" />
+      <input type="checkbox" id="hasPotty" name="hasPotty" value="true" />
       <label for="hasPotty">Has Potty?</label>
     </li>
     <li>
       <!--  -->
-      <input type="checkbox" id="hasChangingTableW" name="hasChangingTableW" value="ChangingTableW?" />
+      <input type="checkbox" id="hasChangingTableW" name="hasChangingTableW" value="true" />
       <label for="hasChangingTableW">Has Changing Table in Womens Room?</label>
     </li>
     <li>
       <!--  -->
-      <input type="checkbox" id="hasChangingTableM" name="hasChangingTableM" value="ChangingTableM?" />
+      <input type="checkbox" id="hasChangingTableM" name="hasChangingTableM" value="true" />
       <label for="hasChangingTableM">Has Changing Table in Mens Room?</label>
     </li>
     <li>
       <!--  -->
-      <input type="checkbox" id="isClean" name="isClean" value="isClean?" />
+      <input type="checkbox" id="isClean" name="isClean" value="true" />
       <label for="isClean">Is Clean?</label>
     </li>
     <li>
       <!--  -->
-      <input type="checkbox" id="hasSnacks" name="hasSnacks" value="hasSnacks?" />
+      <input type="checkbox" id="hasSnacks" name="hasSnacks" value="true" />
       <label for="hasSnacks">Has Snacks?</label>
     </li>
     <li>
       <!--  -->
-      <input type="checkbox" id="hasCoffee" name="hasCoffee" value="hasCoffee?" />
+      <input type="checkbox" id="hasCoffee" name="hasCoffee" value="true" />
       <label for="hasCoffee">Has Coffee?</label>
     </li>
     <li>
       <!--  -->
-      <input type="checkbox" id="kidsCanRunAround" name="kidsCanRunAround" value="kidsCanRunAround?" />
+      <input type="checkbox" id="kidsCanRunAround" name="kidsCanRunAround" value="true" />
       <label for="kidsCanRunAround">Kids Can Run Around?</label>
     </li>
     <li>
       <!--  -->
-      <input type="checkbox" id="everyoneMasked" name="everyoneMasked" value="everyoneMasked?" />
+      <input type="checkbox" id="everyoneMasked" name="everyoneMasked" value="true" />
       <label for="everyoneMasked">Everyone Masked?</label>
     </li>
   </ul>
