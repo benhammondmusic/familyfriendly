@@ -31,7 +31,27 @@ const create = (req, res) => {
   console.log('CREATE REPORT CARD IN DB');
 };
 
+// const newPost = ( req, res ) => {
+//     const userId = req.session.currentUser.userId;
+
+//     db.Post.create( req.body, ( err, createdPost ) => {
+//       if ( err ) return console.log(err)
+
+//       db.User.findById( userId, ( err, foundUser ) => {
+
+//         createdPost.user = foundUser._id;
+//         createdPost.save();
+
+//         foundUser.posts.push(createdPost._id);
+//         foundUser.save();
+
+//         res.redirect('/');
+//       });
+//     });
+//   }
+
 module.exports = {
   index,
   newReportCardForm,
+  create,
 };
