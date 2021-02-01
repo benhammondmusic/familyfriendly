@@ -7,5 +7,6 @@ const index = (req, res) => {
 module.exports = {
   users: require('./users'),
   places: require('./places'),
+  reportCards: require('./reportCards'),
   index,
 };

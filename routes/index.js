@@ -28,5 +28,6 @@ router.get('/logout', function (req, res) {
 module.exports = {
   users: require('./users'),
   places: require('./places'),
+  reportCards: require('./reportCards'),
   index: router,
 };

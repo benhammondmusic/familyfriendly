@@ -18,4 +18,5 @@ mongoose.connection.on('disconnected', (err) => console.log(err));
 module.exports = {
   User: require('./user'),
   Place: require('./place'),
+  ReportCard: require('./reportcard'),
 };
