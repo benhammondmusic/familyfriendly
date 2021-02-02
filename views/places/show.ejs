@@ -5,7 +5,11 @@
 <h3><%= place.reportCards.length %> Report Card(s)</h3>
 <ul>
   <% place.reportCards.forEach(reportCard => { %>
-  <li><%= reportCard.createdAt.toLocaleString('en-US',{year: 'numeric', month: 'short', day: 'numeric'}) %> - Changing Table: <%= reportCard.hasChangingTableW ? '(W)' : '' %> <%= reportCard.hasChangingTableM ? '(M)' : '' %></li>
+  <li>
+    <%= reportCard.createdAt.toLocaleString('en-US',{year: 'numeric', month: 'short', day: 'numeric'}) %> <% if (reportCard.hasChangingTableW || reportCard.hasChangingTableM) { %>
+    <span class="material-icons"> baby_changing_station </span>
+    <%}%> <%= reportCard.hasChangingTableW ? '(W)' : '' %> <%= reportCard.hasChangingTableM ? '(M)' : '' %>
+  </li>
   <% }) %>
 </ul>
 
