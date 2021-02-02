@@ -15,14 +15,14 @@ const index = (req, res) => {
 
       // console.log(context.places[0].authorUserId, 'CONTEXT author user id');
       // send to places/index view
-      res.render('places/index', { context });
+      res.render('places/index', context);
     });
 };
 
 // GET - display form for USER to add NEW place
 const newPlaceForm = (req, res) => {
   const context = { user: req.user };
-  res.render('places/new', { context });
+  res.render('places/new', context);
 };
 
 // POST - create one new place

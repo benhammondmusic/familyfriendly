@@ -1,10 +1,9 @@
-<%- include('../partials/top.ejs') %>
+<%- include('../partials/top.ejs', {user: user}) %>
 <h2>ALL PLACES</h2>
-<p>Logged in as <%= context.user.name %></p>
 
 <div id="places-list">
   <ul>
-    <% context.places.forEach((place) => { %>
+    <% places.forEach((place) => { %>
     <li>
       <!-- make place name a link to view place details / report cards  -->
       <a href="./places/<%=place._id%>"><%= place.name %></a>

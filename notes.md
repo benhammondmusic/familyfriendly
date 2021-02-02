@@ -1,3 +1,5 @@
+Also, important is the fact that MongoDB requires coordinates to be ordered in [Long, Lat] format. (Backwards-seeming. I know. But very important.) This is especially important to remember because Google Maps requires coordinates in the other direction [Lat, Long]. Just try to keep things straight as you're working.
+
 ##### USER STORIES
 
 - A non-logged in user can only view a list of places, and those places' report cards

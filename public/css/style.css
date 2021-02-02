@@ -1,5 +1,26 @@
 /* CUSTOM CSS */
 
+/* FROM COOLORS */
+
+/* CSS HEX */
+:root {
+  --gunmetal: #30343fff;
+  --ghost-white: #fafaffff;
+  --lavender-blue: #e4d9ffff;
+  --space-cadet: #273469ff;
+  --space-cadet-2: #1e2749ff;
+}
+
+body {
+  background-color: var(--lavender-blue);
+  color: var(--gunmetal);
+}
+
+.list-box {
+  background-color: var(--ghost-white);
+  border-radius: 15px;
+}
+
 /* Set the size of the div element that contains the map */
 #map {
   height: 400px;
