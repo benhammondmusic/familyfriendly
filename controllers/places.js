@@ -1,5 +1,6 @@
 // database index which imports places, users, etc
 const db = require('../models');
+const { populate } = require('../models/user');
 
 // GET - display MANY / ALL places
 const index = (req, res) => {
@@ -60,9 +61,38 @@ const newReportCardForm = (req, res) => {
   });
 }; */
 
+// Story.
+//   findOne({ title: 'Casino Royale' }).
+//   populate('author').
+//   exec(function (err, story) {
+//     if (err) return handleError(err);
+//     console.log('The author is %s', story.author.name);
+//     // prints "The author is Ian Fleming"
+//   });
+
 // GET - places/:id    (after user submits report card and creates in DB)
 // SHOW A SINGLE PLACE AND ITS INFO/REPORT CARDS
 const show = (req, res) => {
+  console.log('SHOW SINGLE PLACE');
+  // retrieve this place
+  db.Place.findById(req.params.id)
+    // fill in report cards and other ref fields
+    .populate('reportCards')
+    .exec(function (err, populatedPlace) {
+      if (err) console.log(err);
+      console.log('The populated place:', populatedPlace);
+      // create context to send containing current User and populated place
+      const context = {
+        user: req.user,
+        place: populatedPlace,
+      };
+      res.render('places/show', context);
+    });
+};
+
+/* // GET - places/:id    (after user submits report card and creates in DB)
+// SHOW A SINGLE PLACE AND ITS INFO/REPORT CARDS
+const OLDshow = (req, res) => {
   console.log('SHOW SINGLE PLACE');
   //load single place OBJECT from db (using param PLACE ID STRING), and then send to views/places/show
   db.Place.findById(req.params.id, (err, foundPlace) => {
@@ -73,7 +103,7 @@ const show = (req, res) => {
     console.log(context);
     res.render('places/show', context);
   });
-};
+}; */
 
 module.exports = {
   index,
