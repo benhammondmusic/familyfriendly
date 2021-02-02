@@ -44,18 +44,24 @@ const create = (req, res) => {
     // get place ID OBJECT from request params ID STRING
     createdReportCard.place = mongoose.Types.ObjectId(req.params.id);
 
-    // save to DB
+    // save REPORT CARD to DB
     createdReportCard.save();
 
-    // send logged in user and PLACE that just received the report card
-    const context = {
-      place: createdReportCard.place,
-      user: req.user,
-    };
+    db.Place.findById(req.params.id, (err, foundPlace) => {
+      // add to PLACE document's array of REPORT CARDS
+      foundPlace.reportCards.push(createdReportCard);
+      foundPlace.save();
 
-    // display a place and all its info incl. filed report cards from all users
-    // res.render('places/show', context);
-    res.redirect(`/places/${req.params.id}`);
+      // send logged in user and PLACE that just received the report card
+      const context = {
+        place: foundPlace,
+        user: req.user,
+      };
+
+      // display a place and all its info incl. filed report cards from all users
+      // res.render('places/show', context);
+      res.redirect(`/places/${req.params.id}`);
+    });
   });
 };
 

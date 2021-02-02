@@ -45,7 +45,7 @@ const create = (req, res) => {
     // save to DB
     createdPlace.save();
 
-    // res.redirect('places');
+    res.redirect('places');
   });
 };
 
