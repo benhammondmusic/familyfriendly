@@ -2,4 +2,11 @@
 <h2>PLACE INFO</h2>
 <p>Logged in as <%= user.name %></p>
 
+<h3><%= place.reportCards.length %> Report Card(s)</h3>
+<ul>
+  <% place.reportCards.forEach(reportCard => { %>
+  <li><%= reportCard %></li>
+  <% }) %>
+</ul>
+
 <%- include('../partials/bottom.ejs') %>

@@ -49,28 +49,30 @@ const create = (req, res) => {
   });
 };
 
+/* // DISPLAY FORM FOR USER TO LEAVE REPORT CARD
+const newReportCardForm = (req, res) => {
+  db.Place.findById(req.params.id, (err, foundPlace) => {
+    const context = {
+      user: req.user,
+      place: foundPlace,
+    };
+    res.render('reportcards/new', context);
+  });
+}; */
+
 // GET - places/:id    (after user submits report card and creates in DB)
 // SHOW A SINGLE PLACE AND ITS INFO/REPORT CARDS
 const show = (req, res) => {
   console.log('SHOW SINGLE PLACE');
-  //! need to load single place object from db, and then send to views/places/show
-
-  const context = { user: req.user };
-  console.log(context);
-  res.render('places/show', context);
-
-  // db.Place.findById();
-
-  // db.User.findById( userId, ( err, foundUser ) => {
-
-  //   createdPost.user = foundUser._id;
-  //   createdPost.save();
-
-  //   foundUser.posts.push(createdPost._id);
-  //   foundUser.save();
-
-  //   res.redirect('/');
-  // });
+  //load single place OBJECT from db (using param PLACE ID STRING), and then send to views/places/show
+  db.Place.findById(req.params.id, (err, foundPlace) => {
+    const context = {
+      user: req.user,
+      place: foundPlace,
+    };
+    console.log(context);
+    res.render('places/show', context);
+  });
 };
 
 module.exports = {
