@@ -12,10 +12,10 @@ My wife suggested building an app that would allow an overstressed parent to qui
 
 ### TECH USED
 
-- Front-End: HTML, CSS, JS
-- Back-End: NODE.JS (EXPRESS, PASSPORT), MONGO DB ATLAS, MONGOOSE,
-- Development: GIT, GITHUB, DRAW.IO, TRELLO
-- Resources: [Water.css](https://watercss.kognise.dev/)
+- Front-End: HTML, CSS, Javascript
+- Back-End: Node.js (EXPRESS, PASSPORT), MONGO DB ATLAS, MONGOOSE,
+- Development: Git, GitHub, Draw.io, Trello
+- Resources: [Water.css](https://watercss.kognise.dev/), [Material Design Icons](http://google.github.io/material-design-icons/)
 
 ### GETTING STARTED
 
