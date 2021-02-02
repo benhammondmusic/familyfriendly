@@ -2,7 +2,7 @@ function success(position) {
   const latitude = position.coords.latitude;
   const longitude = position.coords.longitude;
 
-  status.textContent = `Lat: ${latitude} °, Long: ${longitude} °`;
+  status.textContent = `Lat: ${latitude} °, Lng: ${longitude} °`;
   //   mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
   //   mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
 }

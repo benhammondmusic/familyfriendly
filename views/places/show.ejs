@@ -3,6 +3,8 @@
 <p>Logged in as <%= user.name %></p>
 
 <h3><%= place.reportCards.length %> Report Card(s)</h3>
+
+<!-- List Report Cards for this PLACE -->
 <ul>
   <% place.reportCards.forEach(reportCard => { %>
   <li>
@@ -12,5 +14,69 @@
   </li>
   <% }) %>
 </ul>
+
+<!-- display MAP showing THIS PLACE and USER LOCATION -->
+<div id="map"></div>
+
+<!-- MAP API -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2CGd_TVDT97bT076IBQWpm3h3gFtZGJM&callback=booya&libraries=&v=weekly" defer></script>
+<!-- custom JS that gets USER GEO. already already called in header, but not passing to this file -->
+<!-- <script defer src="/js/scripts.js"></script> -->
+
+<script>
+  // get users GEO location
+  // can take a while, need to run google API map initMap() call AFTER success(). using aysnc await worked!!
+  async function success(position) {
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+
+    status.textContent = `Lat: ${latitude} °, Lng: ${longitude} °`;
+    //   mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
+    //   mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
+
+    // send to google map display
+    await initMap(latitude, longitude);
+  }
+
+  function error() {
+    status.textContent = 'Unable to retrieve your location';
+  }
+
+  const status = document.querySelector('#geo-status');
+
+  if (!navigator.geolocation) {
+    status.textContent = 'Geolocation is not supported by your browser';
+  } else {
+    status.textContent = 'Locating…';
+    navigator.geolocation.getCurrentPosition(success, error);
+  }
+
+  // placeholder function because GOOGLE MAPS API Call needs callback, but we are still waiting on browser to get user location.
+  function booya() {
+    console.log('boo ya');
+  }
+
+  // GOOGLE MAPS
+  // Initialize and add the map. initMap() is the callback in the API call src in head
+  function initMap(userLatitude, userLongitude) {
+    const userLatLong = { lat: userLatitude, lng: userLongitude };
+    // map centered at user
+    const map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 4,
+      center: userLatLong,
+    });
+    // marker positioned at USER
+    const userMarker = new google.maps.Marker({
+      position: userLatLong,
+      map: map,
+    });
+
+    // marker positioned at THIS PLACE
+    const placeMarker = new google.maps.Marker({
+      position: userLatLong,
+      map: map,
+    });
+  }
+</script>
 
 <%- include('../partials/bottom.ejs') %>

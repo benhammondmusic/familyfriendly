@@ -6,7 +6,8 @@
   <ul>
     <% context.places.forEach((place) => { %>
     <li>
-      <%= place.name %>
+      <!-- make place name a link to view place details / report cards  -->
+      <a href="./places/<%=place._id%>"><%= place.name %></a>
       <ul>
         <li><%=place.loc.coordinates %></li>
         <li><%=place.authorUserId.name %></li>
