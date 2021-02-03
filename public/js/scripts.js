@@ -4,14 +4,24 @@ async function success(position) {
   const latitude = position.coords.latitude;
   const longitude = position.coords.longitude;
   status.textContent = 'Your location is displayed on the map';
-  const thisPlaceLocation = { lat: parseFloat(status.dataset.lat), lng: parseFloat(status.dataset.lng) };
+
+  // create new array of place lat/lng based off array of data elements containg the same
+  const mapPlaces = [...geoDataEls].map((el) => {
+    const latLng = {};
+    const location = {};
+    latLng.lat = parseFloat(el.dataset.lat);
+    latLng.lng = parseFloat(el.dataset.lng);
+    location.latLng = latLng;
+    location.title = el.dataset.name;
+
+    return location;
+  });
+
+  // make object out of USER lat/lng
   const userLocation = { lat: latitude, lng: longitude };
-  // status.textContent = `Lat: ${latitude} °, Lng: ${longitude} °`;
-  //   mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
-  //   mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
 
   // send to google map display
-  await initMap(userLocation, thisPlaceLocation);
+  await initMap(userLocation, mapPlaces);
 }
 
 function error() {
@@ -19,6 +29,7 @@ function error() {
 }
 
 const status = document.querySelector('#geo-status');
+const geoDataEls = document.querySelectorAll('.geo-data');
 
 if (!navigator.geolocation) {
   status.textContent = 'Geolocation is not supported by your browser';
@@ -29,14 +40,13 @@ if (!navigator.geolocation) {
 
 // GOOGLE MAPS
 // Initialize and add the map.
-function initMap(userLocation, thisPlaceLocation) {
+function initMap(userLocation, mapPlaces) {
   // map centered at user
   const map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 8,
-    center: userLocation,
+    zoom: 6,
+    center: mapPlaces.length === 1 ? mapPlaces[0].latLng : userLocation,
   });
   // marker positioned at USER
-  console.log(userLocation, 'user');
   const userMarker = new google.maps.Marker({
     position: userLocation,
     map: map,
@@ -44,11 +54,12 @@ function initMap(userLocation, thisPlaceLocation) {
     icon: 'http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png',
   });
 
-  // marker positioned at THIS PLACE
-  console.log(thisPlaceLocation, 'this place');
-  const placeMarker = new google.maps.Marker({
-    title: 'This Place',
-    position: thisPlaceLocation,
-    map: map,
+  // markers positioned at PLACE(S)
+  mapPlaces.forEach((mapPlace) => {
+    const placeMarker = new google.maps.Marker({
+      title: mapPlace.title,
+      position: mapPlace.latLng,
+      map: map,
+    });
   });
 }
