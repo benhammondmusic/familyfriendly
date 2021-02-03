@@ -19,5 +19,8 @@ router.get('/:id/reportcards/new', ctrls.reportCards.newReportCardForm);
 // CREATE THE NEW REPORT CARD IN THE DB
 router.post('/:id/reportcards', ctrls.reportCards.create);
 
+// DELETE A PLACE FROM DB
+router.delete('/:id', ctrls.places.destroy);
+
 // IMPORTED BY INDEX ROUTER WHICH IS READ BY SERVER JS
 module.exports = router;

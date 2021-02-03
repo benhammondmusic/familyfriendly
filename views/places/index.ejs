@@ -11,7 +11,7 @@
 <!-- display MAP showing ALL PLACES and USER LOCATION -->
 <div id="map"></div>
 
-<div id="places-list">
+<div class="list-box">
   <ul>
     <% places.forEach((place) => { %>
     <li>
@@ -23,9 +23,15 @@
         <li><%=place.loc.coordinates %></li>
       </ul> -->
     </li>
-    <form action="places/<%=place._id%>/reportcards/new" method="GET">
-      <span class="material-icons"> thumbs_up_down </span>
-      <button>Submit Report Card</button>
+    <!-- ADD REPORT  BUTTON  -->
+    <form action="/places/<%=place._id%>/reportcards/new" method="GET">
+      <button><span class="material-icons"> thumbs_up_down </span></button>
+    </form>
+
+    <!-- DELETE PLACE BUTTON  -->
+
+    <form action="/places/<%=place._id%>?_method=DELETE" method="POST">
+      <button><span class="material-icons"> clear </span></button>
     </form>
     <% }) %>
   </ul>

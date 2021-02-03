@@ -70,24 +70,15 @@ const show = (req, res) => {
     });
 };
 
-/* // GET - places/:id    (after user submits report card and creates in DB)
-// SHOW A SINGLE PLACE AND ITS INFO/REPORT CARDS
-const OLDshow = (req, res) => {
-  console.log('SHOW SINGLE PLACE');
-  //load single place OBJECT from db (using param PLACE ID STRING), and then send to views/places/show
-  db.Place.findById(req.params.id, (err, foundPlace) => {
-    const context = {
-      user: req.user,
-      place: foundPlace,
-    };
-    console.log(context);
-    res.render('places/show', context);
-  });
-}; */
+// DELETE - destroy a place by ID from the db
+const destroy = (req, res) => {
+  console.log('DESTROY PLACE');
+};
 
 module.exports = {
   index,
   newPlaceForm,
   create,
   show,
+  destroy,
 };

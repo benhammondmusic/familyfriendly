@@ -20,9 +20,27 @@ nav {
   background-color: var(--ghost-white);
 }
 
+form {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
 .list-box {
   background-color: var(--ghost-white);
   border-radius: 15px;
+}
+
+ul {
+  list-style-type: none;
+  /* margin: 10px; */
+  /* padding: 0; */
+}
+
+.report-card-date {
+  float: right;
+  margin-right: 10px;
+  font-style: italic;
 }
 
 #map {
@@ -31,6 +49,9 @@ nav {
 }
 
 /* button styling  */
+form {
+  display: inline-block;
+}
 button {
   display: inline-block;
   background-color: var(--space-cadet-2);

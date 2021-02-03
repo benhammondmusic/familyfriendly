@@ -10,15 +10,18 @@
 <a href="/places"> Back to List of All Places</a>
 
 <h5>Report Card(s)</h5>
+<form action="/places/<%=place._id%>/reportcards/new" method="GET">
+  <button><span class="material-icons"> thumbs_up_down </span> Add Report Card</button>
+</form>
 
 <!-- List Report Cards for this PLACE -->
 <div class="list-box">
   <ul>
     <% place.reportCards.forEach(reportCard => { %> <% if (reportCard.hasChangingTableW || reportCard.hasChangingTableM) { %>
     <li>
-      <%= reportCard.createdAt.toLocaleString('en-US',{year: '2-digit', month: 'short', day: 'numeric'}) %>
       <span class="material-icons"> baby_changing_station </span>
       <%= reportCard.hasChangingTableW ? '(W)' : '' %> <%= reportCard.hasChangingTableM ? '(M)' : '' %>
+      <span class="report-card-date"><%= reportCard.createdAt.toLocaleString('en-US',{year: '2-digit', month: 'short', day: 'numeric'}) %></span>
     </li>
     <%}%> <% }) %>
   </ul>

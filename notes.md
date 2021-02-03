@@ -12,14 +12,28 @@ https://trello.com/b/y4dMEE1k/project-2
 
 TODO!
 
+- edit and delete report cards, places
+- save USER location and only have browser get it once
 - make repo public
 - generate new API key once I've figured out how to hide it.
 - populate two levels deep. where did i need this?
-- buttons are ugly
-- need padding/margin
 - import text sizing from website
-- import coolors
 - finish nav bar
-- add map on /places
-- use functions for mapping instead of typing in each view file
+- separate out js fn to reuse code for place/add
 - btn add report card while viewing single place in show
+
+ICONS
+
+<!-- ! use these for user ratings -->
+
+<span class="material-icons"> thumb_up_alt </span>
+<span class="material-icons"> thumb_down_alt </span>
+<span class="material-icons"> add_location_alt </span>
+<span class="material-icons"> edit_location_alt </span>
+<span class="material-icons"> map </span>
+<span class="material-icons"> my_location </span>
+<span class="material-icons"> place </span>
+<span class="material-icons"> clear </span>
+<span class="material-icons"> add_box </span>
+<span class="material-icons"> zoom_in </span>
+<span class="material-icons"> zoom_out </span>
