@@ -1,5 +1,3 @@
-Also, important is the fact that MongoDB requires coordinates to be ordered in [Long, Lat] format. (Backwards-seeming. I know. But very important.) This is especially important to remember because Google Maps requires coordinates in the other direction [Lat, Long]. Just try to keep things straight as you're working.
-
 ##### USER STORIES
 
 - A non-logged in user can only view a list of places, and those places' report cards
@@ -11,3 +9,17 @@ Also, important is the fact that MongoDB requires coordinates to be ordered in [
 - A REPORT CARD can contain an optional Y/N to PLACE fields: POTTY? - TABLE M? - TABLE W? FRESH? NUM-NUMS? COFFEE? MASKS?
 
 https://trello.com/b/y4dMEE1k/project-2
+
+TODO!
+
+- make repo public
+- generate new API key once I've figured out how to hide it.
+- populate two levels deep. where did i need this?
+- buttons are ugly
+- need padding/margin
+- import text sizing from website
+- import coolors
+- finish nav bar
+- add map on /places
+- use functions for mapping instead of typing in each view file
+- btn add report card while viewing single place in show

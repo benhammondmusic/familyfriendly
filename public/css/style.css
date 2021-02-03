@@ -11,24 +11,50 @@
   --space-cadet-2: #1e2749ff;
 }
 
-/* body {
+body {
   background-color: var(--lavender-blue);
   color: var(--gunmetal);
-} */
+}
 
-/* nav {
+nav {
   background-color: var(--ghost-white);
 }
 
 .list-box {
   background-color: var(--ghost-white);
   border-radius: 15px;
-} */
+}
 
-/* Set the size of the div element that contains the map */
 #map {
-  height: 400px;
-  /* The height is 400 pixels */
+  height: 300px;
   width: 100%;
-  /* The width is the width of the web page */
+}
+
+/* button styling  */
+button {
+  display: inline-block;
+  background-color: var(--space-cadet-2);
+  padding: 0.3em 1.2em;
+  margin: 0 0.1em 0.1em 0;
+  border: 0.16em solid var(--gunmetal);
+  border-radius: 2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: ghostwhite;
+  text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+  text-align: center;
+  transition: all 0.2s;
+}
+button:hover {
+  border-color: rgba(255, 255, 255, 1);
+  background-color: white;
+  color: var(--gunmetal);
+}
+@media all and (max-width: 30em) {
+  button {
+    display: block;
+    margin: 0.2em auto;
+  }
 }

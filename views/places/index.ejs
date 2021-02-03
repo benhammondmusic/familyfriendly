@@ -1,5 +1,15 @@
+<script defer src="js/scripts.js"></script>
+<!-- MAP API -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2CGd_TVDT97bT076IBQWpm3h3gFtZGJM&&libraries=&v=weekly"></script>
+
 <%- include('../partials/top.ejs', {user: user}) %>
-<h2>ALL PLACES</h2>
+
+<small id="geo-status"></small>
+
+<h2>All Places</h2>
+
+<!-- display MAP showing ALL PLACES and USER LOCATION -->
+<div id="map"></div>
 
 <div id="places-list">
   <ul>
@@ -7,11 +17,12 @@
     <li>
       <!-- make place name a link to view place details / report cards  -->
       <a href="./places/<%=place._id%>"><%= place.name %></a>
-      <ul>
+      <!-- <ul>
         <li><%=place.loc.coordinates %></li>
-      </ul>
+      </ul> -->
     </li>
     <form action="places/<%=place._id%>/reportcards/new" method="GET">
+      <span class="material-icons"> thumbs_up_down </span>
       <button>Submit Report Card</button>
     </form>
     <% }) %>
@@ -19,5 +30,7 @@
 </div>
 
 <a href="places/new">Add A New Place</a>
+
+<!-- DISPLAY ALL PLACES ON A MAP  -->
 
 <%- include('../partials/bottom.ejs') %>
