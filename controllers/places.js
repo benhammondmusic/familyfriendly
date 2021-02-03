@@ -73,7 +73,22 @@ const show = (req, res) => {
 // DELETE - destroy a place by ID from the db
 const destroy = (req, res) => {
   console.log('DESTROY PLACE');
+  db.Place.findByIdAndDelete(req.params.id, function (err) {
+    if (err) console.log(err);
+  });
+
+  res.redirect(`/places`);
 };
+
+/* 
+const remove = (req, res) => {
+  // delete a ticket by ID
+  Ticket.findByIdAndDelete(req.params.ticketId, function (err) {
+    if (err) console.log(err);
+  });
+
+  res.redirect(`/flights/${req.params.flightId}/show`);
+}; */
 
 module.exports = {
   index,
