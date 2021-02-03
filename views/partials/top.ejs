@@ -21,21 +21,21 @@
   </head>
   <body>
     <!-- <div id="geo-status"></div> -->
-<nav>
+<nav class="tiny">
   
 
 <ul>
   <!-- LOGO  -->
   <li><span class="nav-option">
-    <a href="/">Family Friendly <span class="material-icons"> baby_changing_station </span></a>
+    <a href="/" title="About the App"><span class="material-icons"> baby_changing_station </span>Family Friendly</a>
   </span></li>
     <!-- VIEW ALL PLACES  -->
   <li><span class="nav-option">
-    <a href="/places">View Places</a>
+    <a href="/places" title="View Places"><span class="material-icons"> map </span></a>
   </span></li>
   <!-- ADD NEW PLACE  -->
   <li><span class="nav-option"> 
-    <a href="/places/new">Add Place</a>
+    <a href="/places/new" title="Add Place"><span class="material-icons"> add_location_alt </span></a>
   </span></li>
 
   <!-- LOGIN / LOGOUT  -->
@@ -43,7 +43,7 @@
     <% if (user) { %>
       <a href="/logout">Log Out <%= user.name %></a>
     <% } else { %>
-      <a href="/auth/google">Login with Google</a>
+      <a href="/auth/google">Log In</a>
       <% } %>
     </span></li>
 </ul>

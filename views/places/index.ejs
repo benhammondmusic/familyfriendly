@@ -9,7 +9,9 @@
 <!-- display MAP showing ALL PLACES and USER LOCATION -->
 <div id="map"></div>
 
-<h2>All Places</h2>
+<a href="/places/new"><span class="material-icons"> add_location_alt </span>Add A New Place</a>
+
+<h4>All Places</h4>
 <div class="list-box">
   <ul>
     <% places.forEach((place) => { %>
@@ -24,19 +26,19 @@
 
       <!-- ADD REPORT  BUTTON  -->
       <form action="/places/<%=place._id%>/reportcards/new" method="GET">
-        <button><span class="material-icons"> thumbs_up_down </span></button>
+        <button title="Grade This Place"><span class="material-icons"> thumbs_up_down </span></button>
       </form>
 
       <!-- EDIT PLACE BUTTON  -->
       <form action="/places/<%=place._id%>/edit" method="GET">
-        <button><span class="material-icons"> edit_location_alt </span></button>
+        <button title="Edit Place Details"><span class="material-icons"> edit_location_alt </span></button>
       </form>
 
       <!-- DELETE PLACE BUTTON  -->
       <!-- only available for authoring user  -->
       <% if (place.authorUserId.equals(user && user._id)) { %>
       <form action="/places/<%=place._id%>?_method=DELETE" method="POST">
-        <button class="danger"><span class="material-icons"> clear </span></button>
+        <button class="danger" title="Delete Place"><span class="material-icons"> clear </span></button>
       </form>
       <% } %>
     </li>
