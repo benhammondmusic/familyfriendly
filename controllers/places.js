@@ -40,8 +40,8 @@ const create = (req, res) => {
 
     // place geo location
     createdPlace.loc.type = 'Point';
-    // ! need get user lat/long
-    createdPlace.loc.coordinates = [39.0997, -94.5786];
+    // set coordinates from form data collected in places / new
+    createdPlace.loc.coordinates = [req.body.latitude, req.body.longitude];
 
     // save to DB
     createdPlace.save();

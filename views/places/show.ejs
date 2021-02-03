@@ -63,14 +63,16 @@
   function initMap(userLocation, thisPlaceLocation) {
     // map centered at user
     const map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 1,
-      center: userLocation,
+      zoom: 8,
+      center: thisPlaceLocation,
     });
     // marker positioned at USER
     console.log(userLocation, 'user');
     const userMarker = new google.maps.Marker({
       position: userLocation,
       map: map,
+      title: 'Your Location',
+      icon: 'http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png',
     });
 
     // marker positioned at THIS PLACE
@@ -78,7 +80,7 @@
     const placeMarker = new google.maps.Marker({
       // ! CANT GET PLACE FROM CONTEXT
       // position: place,
-
+      title: 'This Place',
       position: thisPlaceLocation,
       map: map,
     });
