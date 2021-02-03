@@ -33,10 +33,12 @@
       </form>
 
       <!-- DELETE PLACE BUTTON  -->
-
+      <!-- only available for authoring user  -->
+      <% if (place.authorUserId.equals(user && user._id)) { %>
       <form action="/places/<%=place._id%>?_method=DELETE" method="POST">
         <button class="danger"><span class="material-icons"> clear </span></button>
       </form>
+      <% } %>
     </li>
     <% }) %>
   </ul>

@@ -67,25 +67,11 @@ const create = (req, res) => {
 
 // DELETE - destroy a REPORT CARD from the db
 const destroy = (req, res) => {
-  console.log('DESTROY REPORT CARD!');
-  const deletedCard = db.ReportCard.findByIdAndDelete(req.params.id, function (err) {
+  db.ReportCard.findByIdAndDelete(req.params.id, function (err, deletedReportCard) {
     if (err) console.log(err);
+    else res.redirect(`/places/${deletedReportCard.place}`);
   });
-
-  // ! need to extract PLACE from the deleteCard, use for redirect
-  // res.redirect(`/places/${placeId}`);
-  res.redirect(`/places/`);
 };
-
-/* // DELETE - destroy a place by ID from the db
-const destroy = (req, res) => {
-  console.log('DESTROY PLACE');
-  db.Place.findByIdAndDelete(req.params.id, function (err) {
-    if (err) console.log(err);
-  });
-
-  res.redirect(`/places`);
-}; */
 
 module.exports = {
   index,

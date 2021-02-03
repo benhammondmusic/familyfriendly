@@ -99,11 +99,12 @@ const update = (req, res) => {
 // DELETE - destroy a place by ID from the db
 const destroy = (req, res) => {
   console.log('DESTROY PLACE');
-  db.Place.findByIdAndDelete(req.params.id, function (err) {
+  db.Place.findByIdAndDelete(req.params.id, function (err, deletedPlace) {
     if (err) console.log(err);
+    else {
+      res.redirect(`/places`);
+    }
   });
-
-  res.redirect(`/places`);
 };
 
 module.exports = {
