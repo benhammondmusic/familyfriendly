@@ -49,13 +49,14 @@ ul {
 }
 
 /* button styling  */
+
 form {
   display: inline-block;
 }
 button {
   display: inline-block;
   background-color: var(--space-cadet-2);
-  padding: 0.3em 1.2em;
+  padding: 0.3em 0.6em;
   margin: 0 0.1em 0.1em 0;
   border: 0.16em solid var(--gunmetal);
   border-radius: 2em;
@@ -78,4 +79,12 @@ button:hover {
     display: block;
     margin: 0.2em auto;
   }
+}
+.danger {
+  background-color: darkred;
+  text-shadow: none;
+}
+.tiny {
+  padding: 0.2em;
+  font-size: 0.7em;
 }

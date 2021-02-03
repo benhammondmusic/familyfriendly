@@ -4,21 +4,31 @@
 
 <%- include('../partials/top.ejs') %>
 <small id="geo-status"></small>
-<h2><%=place.name%> Info</h2>
+<h2><%=place.name%></h2>
+<!-- ADD REPORT CARD BUTTON  -->
+<form action="/places/<%=place._id%>/reportcards/new" method="GET">
+  <button><span class="material-icons"> thumbs_up_down </span></button>
+</form>
+
+<!-- DELETE PLACE BUTTON  -->
+<form action="/places/<%=place._id%>?_method=DELETE" method="POST">
+  <button class="danger"><span class="material-icons"> clear </span></button>
+</form>
 <!-- use to pass data from server to front end -->
 <data class="geo-data" data-name="<%=place.name%>" data-lat="<%=place.loc.coordinates[0]%>" data-lng="<%=place.loc.coordinates[1]%>"></data>
 <a href="/places"> Back to List of All Places</a>
 
 <h5>Report Card(s)</h5>
-<form action="/places/<%=place._id%>/reportcards/new" method="GET">
-  <button><span class="material-icons"> thumbs_up_down </span> Add Report Card</button>
-</form>
 
 <!-- List Report Cards for this PLACE -->
 <div class="list-box">
   <ul>
     <% place.reportCards.forEach(reportCard => { %> <% if (reportCard.hasChangingTableW || reportCard.hasChangingTableM) { %>
     <li>
+      <!-- DELETE REPORT CARD BUTTON   -->
+      <form action="/reportCards/<%=reportCard._id%>?_method=DELETE" method="POST">
+        <button class="danger tiny"><span class="material-icons"> clear </span></button>
+      </form>
       <span class="material-icons"> baby_changing_station </span>
       <%= reportCard.hasChangingTableW ? '(W)' : '' %> <%= reportCard.hasChangingTableM ? '(M)' : '' %>
       <span class="report-card-date"><%= reportCard.createdAt.toLocaleString('en-US',{year: '2-digit', month: 'short', day: 'numeric'}) %></span>

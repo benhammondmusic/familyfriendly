@@ -12,7 +12,10 @@ https://trello.com/b/y4dMEE1k/project-2
 
 TODO!
 
-- edit and delete report cards, places
+- edit and delete report cards,
+- edit places.
+- limit delete places to authoring user.
+- extract parent PLACE when deleting REPORTCARD to properly redirect
 - save USER location and only have browser get it once
 - make repo public
 - generate new API key once I've figured out how to hide it.

@@ -18,7 +18,7 @@
       <!-- use to pass data from server to front end -->
       <data class="geo-data" data-name="<%=place.name%>" data-lat="<%=place.loc.coordinates[0]%>" data-lng="<%=place.loc.coordinates[1]%>"></data>
       <!-- make place name a link to view place details / report cards  -->
-      <a href="./places/<%=place._id%>"><%= place.name %></a>
+      <a href="/places/<%=place._id%>"><%= place.name %></a>
       <!-- <ul>
         <li><%=place.loc.coordinates %></li>
       </ul> -->

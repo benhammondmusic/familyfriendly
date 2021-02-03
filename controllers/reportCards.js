@@ -65,27 +65,31 @@ const create = (req, res) => {
   });
 };
 
-// const newPost = ( req, res ) => {
-//     const userId = req.session.currentUser.userId;
+// DELETE - destroy a REPORT CARD from the db
+const destroy = (req, res) => {
+  console.log('DESTROY REPORT CARD!');
+  const deletedCard = db.ReportCard.findByIdAndDelete(req.params.id, function (err) {
+    if (err) console.log(err);
+  });
 
-//     db.Post.create( req.body, ( err, createdPost ) => {
-//       if ( err ) return console.log(err)
+  // ! need to extract PLACE from the deleteCard, use for redirect
+  // res.redirect(`/places/${placeId}`);
+  res.redirect(`/places/`);
+};
 
-//       db.User.findById( userId, ( err, foundUser ) => {
+/* // DELETE - destroy a place by ID from the db
+const destroy = (req, res) => {
+  console.log('DESTROY PLACE');
+  db.Place.findByIdAndDelete(req.params.id, function (err) {
+    if (err) console.log(err);
+  });
 
-//         createdPost.user = foundUser._id;
-//         createdPost.save();
-
-//         foundUser.posts.push(createdPost._id);
-//         foundUser.save();
-
-//         res.redirect('/');
-//       });
-//     });
-//   }
+  res.redirect(`/places`);
+}; */
 
 module.exports = {
   index,
   newReportCardForm,
   create,
+  destroy,
 };
