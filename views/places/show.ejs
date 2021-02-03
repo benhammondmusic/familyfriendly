@@ -1,9 +1,9 @@
 <%- include('../partials/top.ejs') %>
-<small id="geo-status"></small>
+<small id="geo-status" data-lat="<%=place.loc.coordinates[0]%>" data-lng="<%=place.loc.coordinates[1]%>"></small>
 <h2><%=place.name%> Info</h2>
 <a href="/places"> Back to List of All Places</a>
 
-<h3>Report Card(s)</h3>
+<h5>Report Card(s)</h5>
 
 <!-- List Report Cards for this PLACE -->
 <div class="list-box">
@@ -20,8 +20,8 @@
 <!-- display MAP showing THIS PLACE and USER LOCATION -->
 <div id="map"></div>
 
-<!-- MAP API -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2CGd_TVDT97bT076IBQWpm3h3gFtZGJM&callback=booya&libraries=&v=weekly" defer></script>
+<!-- MAP API - REMOVED API CALLBACK-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2CGd_TVDT97bT076IBQWpm3h3gFtZGJM&&libraries=&v=weekly"></script>
 
 <script>
   // get users GEO location
@@ -30,12 +30,14 @@
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
     status.textContent = 'Your location is displayed on the map';
+    const thisPlaceLocation = { lat: parseFloat(status.dataset.lat), lng: parseFloat(status.dataset.lng) };
+    const userLocation = { lat: latitude, lng: longitude };
     // status.textContent = `Lat: ${latitude} °, Lng: ${longitude} °`;
     //   mapLink.href = `https://www.openstreetmap.org/#map=18/${latitude}/${longitude}`;
     //   mapLink.textContent = `Latitude: ${latitude} °, Longitude: ${longitude} °`;
 
     // send to google map display
-    await initMap(latitude, longitude);
+    await initMap(userLocation, thisPlaceLocation);
   }
 
   function error() {
@@ -58,24 +60,26 @@
 
   // GOOGLE MAPS
   // Initialize and add the map.
-  function initMap(userLatitude, userLongitude) {
-    const userLatLong = { lat: userLatitude, lng: userLongitude };
+  function initMap(userLocation, thisPlaceLocation) {
     // map centered at user
     const map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 6,
-      center: userLatLong,
+      zoom: 1,
+      center: userLocation,
     });
     // marker positioned at USER
+    console.log(userLocation, 'user');
     const userMarker = new google.maps.Marker({
-      position: userLatLong,
+      position: userLocation,
       map: map,
     });
 
     // marker positioned at THIS PLACE
+    console.log(thisPlaceLocation, 'this place');
     const placeMarker = new google.maps.Marker({
       // ! CANT GET PLACE FROM CONTEXT
       // position: place,
-      position: { lat: userLatitude + 1, lng: userLongitude + 2 },
+
+      position: thisPlaceLocation,
       map: map,
     });
   }

@@ -1,17 +1,50 @@
 <%- include('../partials/top.ejs') %>
-<h2>ADD NEW PLACE</h2>
-<p>Logged in as <%= context.user.name %></p>
+<small id="geo-status"></small>
+<h2>Add A New Place</h2>
 
 <!-- ADD A PLACE FORM -->
 <form action="/places" method="POST">
   <div>
     <label for="name">Place Name:</label>
     <input name="name" id="name" placeholder="e.g. Starbucks" />
+    <label for="name">Latitude:</label>
+    <input type="text" id="latitude" name="latitude" />
+    <label for="name">Longitude:</label>
+    <input type="text" id="longitude" name="longitude" />
   </div>
 
   <div>
     <button>Add Place</button>
   </div>
 </form>
+
+<script>
+  // get users GEO location
+  async function success(position) {
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+    status.textContent = 'Your current location is being used for the new place';
+    latitudeEl.value = latitude;
+    longitudeEl.value = longitude;
+
+    // update form elements with lat/lng
+    // const userLocation = { lat: latitude, lng: longitude };
+  }
+
+  function error() {
+    status.textContent = 'Unable to retrieve your location';
+  }
+
+  const status = document.querySelector('#geo-status');
+  const latitudeEl = document.querySelector('#latitude');
+  const longitudeEl = document.querySelector('#longitude');
+
+  if (!navigator.geolocation) {
+    status.textContent = 'Geolocation is not supported by your browser';
+  } else {
+    status.textContent = 'Locating…';
+    navigator.geolocation.getCurrentPosition(success, error);
+  }
+</script>
 
 <%- include('../partials/bottom.ejs') %>

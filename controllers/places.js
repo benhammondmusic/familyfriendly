@@ -41,7 +41,7 @@ const create = (req, res) => {
     // place geo location
     createdPlace.loc.type = 'Point';
     // ! need get user lat/long
-    createdPlace.loc.coordinates = [1000, 1000];
+    createdPlace.loc.coordinates = [39.0997, -94.5786];
 
     // save to DB
     createdPlace.save();
@@ -49,26 +49,6 @@ const create = (req, res) => {
     res.redirect('places');
   });
 };
-
-/* // DISPLAY FORM FOR USER TO LEAVE REPORT CARD
-const newReportCardForm = (req, res) => {
-  db.Place.findById(req.params.id, (err, foundPlace) => {
-    const context = {
-      user: req.user,
-      place: foundPlace,
-    };
-    res.render('reportcards/new', context);
-  });
-}; */
-
-// Story.
-//   findOne({ title: 'Casino Royale' }).
-//   populate('author').
-//   exec(function (err, story) {
-//     if (err) return handleError(err);
-//     console.log('The author is %s', story.author.name);
-//     // prints "The author is Ian Fleming"
-//   });
 
 // GET - places/:id    (after user submits report card and creates in DB)
 // SHOW A SINGLE PLACE AND ITS INFO/REPORT CARDS

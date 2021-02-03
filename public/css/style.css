@@ -11,15 +11,19 @@
   --space-cadet-2: #1e2749ff;
 }
 
-body {
+/* body {
   background-color: var(--lavender-blue);
   color: var(--gunmetal);
+} */
+
+/* nav {
+  background-color: var(--ghost-white);
 }
 
 .list-box {
   background-color: var(--ghost-white);
   border-radius: 15px;
-}
+} */
 
 /* Set the size of the div element that contains the map */
 #map {
