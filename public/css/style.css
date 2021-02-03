@@ -12,18 +12,67 @@
 }
 
 body {
+  /* padding: 20px; */
+  margin: 0px;
+  padding: 0px;
   background-color: var(--lavender-blue);
   color: var(--gunmetal);
+  font-family: 'Nunito', sans-serif;
 }
 
+main {
+  padding: 4em 1em;
+}
+
+/* NAV STYLES  */
 nav {
   background-color: var(--ghost-white);
+  padding: 0px;
+  margin: 0px;
+  /* border: 2px solid red; */
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--space-cadet);
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
+nav ul li {
+  float: left;
+}
+
+nav ul li a {
+  display: block;
+  color: var(--ghost-white);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav ul li a:hover:not(.active) {
+  background-color: var(--gunmetal);
+}
+
+.active {
+  background-color: var(--lavender-blue);
+}
+
+/* FORMS / SUBMIT  */
+
 form {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
+  display: inline-block;
+  /* flex-direction: row; */
+  /* flex-wrap: nowrap; */
+  /* justify-items: center; */
+}
+
+input {
+  background-color: var(--ghost-white);
 }
 
 .list-box {
@@ -50,11 +99,8 @@ ul {
 
 /* button styling  */
 
-form {
-  display: inline-block;
-}
 button {
-  display: inline-block;
+  /* display: inline-block; */
   background-color: var(--space-cadet-2);
   padding: 0.3em 0.6em;
   margin: 0 0.1em 0.1em 0;
@@ -76,7 +122,7 @@ button:hover {
 }
 @media all and (max-width: 30em) {
   button {
-    display: block;
+    /* display: block; */
     margin: 0.2em auto;
   }
 }
@@ -87,4 +133,8 @@ button:hover {
 .tiny {
   padding: 0.2em;
   font-size: 0.7em;
+}
+
+footer {
+  padding: 2em;
 }

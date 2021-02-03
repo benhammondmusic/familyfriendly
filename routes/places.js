@@ -20,6 +20,9 @@ router.get('/:id/reportcards/new', ctrls.reportCards.newReportCardForm);
 router.post('/:id/reportcards', ctrls.reportCards.create);
 
 // DELETE A PLACE FROM DB
+router.get('/:id/edit', ctrls.places.edit);
+
+// DELETE A PLACE FROM DB
 router.delete('/:id', ctrls.places.destroy);
 
 // IMPORTED BY INDEX ROUTER WHICH IS READ BY SERVER JS

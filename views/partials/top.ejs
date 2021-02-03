@@ -8,15 +8,13 @@
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="/css/style.css" />
 
-    <!-- MATERIALIZE Compiled and minified CSS -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
-
-    <!-- MATERIALIZE  Compiled and minified JavaScript -->
-    <!-- <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
-
     <!-- material icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    
+
+    <!-- GOOGLE FONT  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+
     <!-- custom JS -->
     <!-- <script defer src="/js/scripts.js"></script> -->
     <title>Family Friendly</title>
@@ -24,11 +22,42 @@
   <body>
     <!-- <div id="geo-status"></div> -->
 <nav>
-  <% if (user) { %>
-    <p>Logged in as <%= user.name %></p>
-  <% } else { %>
-    <a href="/auth/google">Login with Google</a>
-    <% } %>
+  
+
+<ul>
+  <!-- LOGO  -->
+  <li><span class="nav-option">
+    <a href="/">Family Friendly</a>
+  </span></li>
+    <!-- VIEW ALL PLACES  -->
+  <li><span class="nav-option">
+    <a href="/places">View Places</a>
+  </span></li>
+  <!-- ADD NEW PLACE  -->
+  <li><span class="nav-option"> 
+    <a href="/places/new">Add Place</a>
+  </span></li>
+
+  <!-- LOGIN / LOGOUT  -->
+  <li><span class="nav-option">
+    <% if (user) { %>
+      <a href="/logout">Log Out <%= user.name %></a>
+    <% } else { %>
+      <a href="/auth/google">Login with Google</a>
+      <% } %>
+    </span></li>
+</ul>
+
+</nav>
+
+<main>
+
+  
+  
+    
+
+
+
 </nav>
 
     

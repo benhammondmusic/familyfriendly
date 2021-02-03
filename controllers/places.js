@@ -70,6 +70,14 @@ const show = (req, res) => {
     });
 };
 
+// GET places/:id/edit - get PLACE from db, send details to EDIT FORM
+const edit = (req, res) => {
+  console.log('EDIT PLACE', req.params.id);
+  const placeToEdit = db.Place.findById(req.params.id);
+  const context = { user: req.user, placeToEdit };
+  res.render('places/edit', context);
+};
+
 // DELETE - destroy a place by ID from the db
 const destroy = (req, res) => {
   console.log('DESTROY PLACE');
@@ -80,20 +88,11 @@ const destroy = (req, res) => {
   res.redirect(`/places`);
 };
 
-/* 
-const remove = (req, res) => {
-  // delete a ticket by ID
-  Ticket.findByIdAndDelete(req.params.ticketId, function (err) {
-    if (err) console.log(err);
-  });
-
-  res.redirect(`/flights/${req.params.flightId}/show`);
-}; */
-
 module.exports = {
   index,
   newPlaceForm,
   create,
   show,
+  edit,
   destroy,
 };
