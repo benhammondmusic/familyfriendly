@@ -9,7 +9,10 @@
 <form action="/places/<%=place._id%>/reportcards/new" method="GET">
   <button><span class="material-icons"> thumbs_up_down </span></button>
 </form>
-
+<!-- EDIT PLACE BUTTON  -->
+<form action="/places/<%=place._id%>/edit" method="GET">
+  <button><span class="material-icons"> edit_location_alt </span></button>
+</form>
 <!-- DELETE PLACE BUTTON  -->
 <form action="/places/<%=place._id%>?_method=DELETE" method="POST">
   <button class="danger"><span class="material-icons"> clear </span></button>

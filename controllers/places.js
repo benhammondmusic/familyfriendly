@@ -70,12 +70,30 @@ const show = (req, res) => {
     });
 };
 
-// GET places/:id/edit - get PLACE from db, send details to EDIT FORM
+// GET places/:id/edit - send to PREPOPULATED FORM for editing
 const edit = (req, res) => {
-  console.log('EDIT PLACE', req.params.id);
-  const placeToEdit = db.Place.findById(req.params.id);
-  const context = { user: req.user, placeToEdit };
-  res.render('places/edit', context);
+  // find this post in db
+  db.Place.findById(req.params.id)
+    // callback fn to add with user to context object
+    .then((placeToEdit) => {
+      const context = { user: req.user, place: placeToEdit };
+      console.log(context, 'context');
+      // send along to EDIT FORM page
+      res.render('places/edit', context);
+    })
+    .catch((err) => console.log(err));
+};
+
+// PATCH places/:id/ - updated info of PLACE in databse
+const update = (req, res) => {
+  // find this post in db
+  db.Place.findByIdAndUpdate(req.params.id, req.body)
+    // callback fn to add with user to context object
+    .then((updatedPlace) => {
+      console.log(updatedPlace);
+      res.redirect(`/places/${updatedPlace._id}`);
+    })
+    .catch((err) => console.log(err));
 };
 
 // DELETE - destroy a place by ID from the db
@@ -94,5 +112,6 @@ module.exports = {
   create,
   show,
   edit,
+  update,
   destroy,
 };

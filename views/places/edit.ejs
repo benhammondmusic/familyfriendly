@@ -1,50 +1,22 @@
-<!-- <%- include('../partials/top.ejs') %>
+<%- include('../partials/top.ejs') %>
 <small id="geo-status"></small>
-<h2>Add A New Place</h2>
+<h2>Update <%=place.name%></h2>
+<div class="report-card-date"><span>Created: <%=place.createdAt.toLocaleString('en-US',{year: '2-digit', month: 'short', day: 'numeric'}) %></span> <span>Last Updated: <%=place.updatedAt.toLocaleString('en-US',{year: '2-digit', month: 'short', day: 'numeric'}) %></span></div>
 
 <!-- ADD A PLACE FORM -->
-<form action="/places" method="POST">
+<form action="/places/<%=place._id%>?_method=PATCH" method="POST">
   <div>
     <label for="name">Place Name:</label>
-    <input name="name" id="name" placeholder="e.g. Starbucks" />
+    <input name="name" id="name" value="<%=place.name%>" />
     <label for="name">Latitude:</label>
-    <input type="text" id="latitude" name="latitude" />
+    <input type="text" id="latitude" name="latitude" value="<%=place.loc.coordinates[0]%>" />
     <label for="name">Longitude:</label>
-    <input type="text" id="longitude" name="longitude" />
+    <input type="text" id="longitude" name="longitude" value="<%=place.loc.coordinates[1]%>" />
   </div>
 
   <div>
-    <button>Add Place</button>
+    <button>Update Place</button>
   </div>
 </form>
 
-<script>
-  // get users GEO location
-  async function success(position) {
-    const latitude = position.coords.latitude;
-    const longitude = position.coords.longitude;
-    status.textContent = 'Your current location is being used for the new place';
-    latitudeEl.value = latitude;
-    longitudeEl.value = longitude;
-
-    // update form elements with lat/lng
-    // const userLocation = { lat: latitude, lng: longitude };
-  }
-
-  function error() {
-    status.textContent = 'Unable to retrieve your location';
-  }
-
-  const status = document.querySelector('#geo-status');
-  const latitudeEl = document.querySelector('#latitude');
-  const longitudeEl = document.querySelector('#longitude');
-
-  if (!navigator.geolocation) {
-    status.textContent = 'Geolocation is not supported by your browser';
-  } else {
-    status.textContent = 'Locating…';
-    navigator.geolocation.getCurrentPosition(success, error);
-  }
-</script>
-
-<%- include('../partials/bottom.ejs') %> -->
+<%- include('../partials/bottom.ejs') %>
