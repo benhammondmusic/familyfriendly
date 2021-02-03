@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const app = express();
 // so will work both: deployed || locally
@@ -6,7 +7,6 @@ const port = process.env.PORT || 3000;
 const methodOverride = require('method-override');
 const session = require('express-session');
 const passport = require('passport');
-require('dotenv').config();
 
 // REQUIRES ROUTES / INDEX WHICH IN TURN LOADS USER, PLACE, ETC
 const routes = require('./routes');

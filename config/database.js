@@ -1,12 +1,5 @@
-const mongoose = require('mongoose');
 require('dotenv').config();
-
-// CONNECT TO LOCAL MONGODB
-/* mongoose.connect(process.env.MONGODB_URI, {
-  useNewUrlParser: true,
-  useCreateIndex: true,
-  useUnifiedTopology: true,
-}); */
+const mongoose = require('mongoose');
 
 // CONNECT TO REMOTE MONGODB ATLAS
 mongoose.connect(process.env.DATABASE_URL, {
