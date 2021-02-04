@@ -1,53 +1,64 @@
-<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="661px" height="341px" viewBox="-0.5 -0.5 661 341" content="&lt;mxfile host=&quot;55bf8915-e023-44c7-9f0f-e133d8de7035&quot; modified=&quot;2021-01-30T18:48:58.357Z&quot; agent=&quot;5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.52.1 Chrome/83.0.4103.122 Electron/9.3.5 Safari/537.36&quot; etag=&quot;oCQw1PUM0icoUpE8R-A1&quot; version=&quot;13.10.0&quot; type=&quot;embed&quot;&gt;&lt;diagram id=&quot;3o57Qta00_Z8Sw88tQ12&quot; name=&quot;Page-1&quot;&gt;7ZhNc5swEIZ/DdNTMhhCbB9jm6SHpvXY7SQ5KrAGJoAYIdvQX98ViC8jYzeTjHvoIY70aneRdh/WSjRzHmUPjCT+I3Uh1AzdzTRzoRnGrTXBTyHkpWAZ01LwWOCW0qgR1sFvkKIu1W3gQtox5JSGPEi6okPjGBze0QhjdN8129Cw+9SEeNAT1g4J++pT4HK/VCeW3uhfIfD86skjXa5EpDKWQuoTl+5bkmlr5pxRystRlM0hFLmr8lL63R9ZrTfGIObnOBilw46EW3m2X2t7pRm3IbrPXhmOPDHqK1foFpMI1CtkRzhh6rW3wE2/CBsPa4j7s2ZiQ7hfMV6ofRwGhIMrzhYSp+XHYJPWjiRK0D5+TZOjW24CMUgoEw91CHPVAYsK8bwqO6Pb2AWRuRFG2/sBh3WCu0Fhj5yj5vMolMv9Ssji7IBxyFqSrMwD0Ag4y9Ek6+JevSVyum+QG42l5rdxM6VIJOZeHbkhAQcSBjUYZg+M5be7uX0uGarkFpk9VmA3SLGy+SBUCeVcWKQOZUdMHJ/E+O5iPyCvofj9dKbdo9puwyD1Y0jT4cfG26j+HNod3WwAhm0ikr4VfG6TYUOsKn6G1CE8oPHFYa1bmqTV0BW4TlS4Tj8A15serit7+WP1E7X53UrB3BEKsTcUNXAHETTvcfiCe/p+NoV/7fJ40qVg86QVQnmFP+mZ4WpIT5nvgbAg9iSxp8M7NIoEXeq0iqYuusRYdAltfPnee3Nzsvka5mfRPOnR3MsHuHgjkVM8ZcDzFYRFJ7CbldmGxlxen0ZGN0cQu3fiKoRTexWROC803OgzKno1eRGT67FVzRdZe3WRy9nRhKd0yxzofKXgvcAD3nltxWEGi9LuIboq65XIiiTsuvc0VSnkM5a0vHhUTWx60MRuD6pZnkd6te9VB4HMg0Cjw0BlFnqBCjLqg58Fy/RSsGQBf67WcVyiYslZA4qY5G1qFIAZHwKY8R+wzwCsuoZerh1d6dc6lrKDjDUdn2CmmC2BBXhWYC0c+9SOh7FVQvQeHM1/iz7T+CD6jMNA76YPp81fv6V58y8E0/4D&lt;/diagram&gt;&lt;/mxfile&gt;">
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="661px" height="391px" viewBox="-0.5 -0.5 661 391" content="&lt;mxfile host=&quot;f0cadcb9-9008-40df-b322-b4d4e541e36e&quot; modified=&quot;2021-02-04T02:41:14.271Z&quot; agent=&quot;5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.52.1 Chrome/83.0.4103.122 Electron/9.3.5 Safari/537.36&quot; etag=&quot;hHnaWKHS0pV9yeys2RGk&quot; version=&quot;13.10.0&quot; type=&quot;embed&quot;&gt;&lt;diagram id=&quot;3o57Qta00_Z8Sw88tQ12&quot; name=&quot;Page-1&quot;&gt;7VhNc5swEP01nraHZDAYOzk6NvmYaVqPnTTJUYE1MAHECBGb/vquQBgwX27qjnvowZh9uxKr1XuLhoE287c3jITOPbXAG6iKtR1o84GqavoIrwJIMkAd6xlgM9fKoGEBrNyfIEFForFrQVQJ5JR63A2roEmDAExewQhjdFMNW1Ov+tSQ2FADVibx6uiTa3EnQy90pcBvwbWd/MlDRXp8kgdLIHKIRTclSDMG2oxRyrM7fzsDT9Qur0s27rrFu0uMQcAPGaBmA96JF8u1Pa6MJSKf738svgzUsYfTXL0yvLPF3Rm6AuJDswd84nrNLptS24M7q9lrMiAcLJG6R0zcWkxbv8Irg3VmYGpj4ocYH7xG4q9vIgYhZVxAhFktE+5NUEeuH5cPt2k97ubGdNX8TPJOOGHNvjfXij6JGLu0KDfg7SmkrOBJTjVG48ACsVtDdG8cl8MqxBIhsEFtIeZw35Pu+u5LQrwD47AtQZINN0B94CzBkG1VYknV3BQ0H04k5pQpPpYgkdKydzMX7MMbScBmMmo1Mi6+TmdGNxtJzB3KHiNgbeRqYkJKg6YN6Ca4R03CXRqIlHCFLSmZDgmwgWBTIq+e+H8aaNcHht5noT1U/yBT1wwiJ4BIFCEyKWtZZRD7u2tHmEnXa4DuGMH/tPKiZCwO0gYsKN09zCfRW6riOCwCT6yMXc/OpaE1aOOiQRvq5AjaGNW0sTQW35cPiM2my/mfaiRtu0IaEyGNwaRFGS3MVl4w/W+/xfCuIRa28J1uUxpgWtz1IeJCF03J9QtCmx72Bgkp50lviqmSeqNQQmf4iw6cbiepvvANEOYGthRK//Qm9X1B/FNLaDSqSkivK0jVmhSkHUFBFzUF1eoBFh7zpImrdHmyBC9t+EbhuVrTgMsz6VCt1ggCayrOl2gaS58ESYphos+IKLnxIozziZ7b823ZO0+k1VrwiMbMhMo7Ew8gNvBKqxCL6dyUct9Smt7pOcjSIrxXD79NWyGfsaDZCSdvnJfVXVf3zwrZeuSo8mF1byJtb6LaoSOrQm2ilBm7hR9ElstTkWXr8ufcj/cZVXRpFUQRRlJmTQPB1KMQTP1PsL9BsPxgfbp2dKacK7iVFcrol5MezqTWAhi+jTmwEh3rrJ100/aj7NP+cfZp6pHYp+5P9GH2oVl8UsjCi+8ymvEL&lt;/diagram&gt;&lt;/mxfile&gt;">
     <defs/>
     <g>
-        <rect x="0" y="0" width="170" height="130" rx="19.5" ry="19.5" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+        <rect x="0" y="0" width="170" height="160" rx="24" ry="24" fill="#ffffff" stroke="#000000" pointer-events="all"/>
         <g transform="translate(-0.5 -0.5)">
             <switch>
                 <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 168px; height: 1px; padding-top: 65px; margin-left: 1px;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 168px; height: 1px; padding-top: 80px; margin-left: 1px;">
                         <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
                             <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
-                                USER
-                                <br/>
+                                USER (MVP)
                                 <br/>
                                 - name
+                                <br/>
+                                - email
+                                <br/>
+                                - googleId
+                                <br/>
+                                - created places [ refs ]
+                                <br/>
+                                - created report cards [ refs ]
+                                <br/>
+                                <br/>
+                                FURTHER IDEAS
                                 <br/>
                                 - avatar
                                 <br/>
                                 - kids' ages [ int ]
                                 <br/>
-                                - created places [ refs ]
-                                <br/>
-                                - created report cards [ refs ]
                             </div>
                         </div>
                     </div>
                 </foreignObject>
-                <text x="85" y="69" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">
-                    USER...
+                <text x="85" y="84" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    USER (MVP)...
                 </text>
             </switch>
         </g>
-        <rect x="210" y="150" width="180" height="190" rx="27" ry="27" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+        <rect x="210" y="120" width="180" height="270" rx="27" ry="27" fill="#ffffff" stroke="#000000" pointer-events="all"/>
         <g transform="translate(-0.5 -0.5)">
             <switch>
                 <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 245px; margin-left: 211px;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 255px; margin-left: 211px;">
                         <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
                             <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
-                                PLACE
+                                PLACE (MVP)
                                 <br/>
+                                - authorUserId
                                 <br/>
                                 - report cards [refs]
                                 <br/>
-                                - display name
+                                - name
                                 <br/>
-                                - potty score
+                                - location (geo)
                                 <br/>
-                                - change table W
+                                - change table W?
                                 <br/>
-                                - change table M
+                                - change table M?
+                                <br/>
+                                <br/>
+                                FURTHER IDEAS
                                 <br/>
                                 - freshness score
                                 <br/>
@@ -55,35 +66,41 @@
                                 <br/>
                                 - coffee score
                                 <br/>
-                                - masked up score
+                                - kids can run around score
                                 <br/>
-                                - geo location
+                                - masked up score
                             </div>
                         </div>
                     </div>
                 </foreignObject>
-                <text x="300" y="249" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">
-                    PLACE...
+                <text x="300" y="259" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    PLACE (MVP)...
                 </text>
             </switch>
         </g>
-        <rect x="430" y="0" width="230" height="190" rx="28.5" ry="28.5" fill="#ffffff" stroke="#000000" pointer-events="all"/>
+        <rect x="430" y="40" width="230" height="230" rx="34.5" ry="34.5" fill="#ffffff" stroke="#000000" pointer-events="all"/>
         <g transform="translate(-0.5 -0.5)">
             <switch>
                 <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 228px; height: 1px; padding-top: 95px; margin-left: 431px;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 228px; height: 1px; padding-top: 155px; margin-left: 431px;">
                         <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
                             <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
-                                REPORT CARD
+                                REPORT CARD (MVP)
                                 <br/>
+                                - authorUserId
                                 <br/>
-                                - date made
-                                <br/>
-                                - potty? Y/N
+                                - place {ref}
                                 <br/>
                                 - change table W? Y/N
                                 <br/>
                                 - change table M? Y/N
+                                <br/>
+                                - date reported {timestamp}
+                                <br/>
+                                <br/>
+                                FURTHER IDEAS:
+                                <br/>
+                                - potty? Y/N
                                 <br/>
                                 - fresh? Y/N
                                 <br/>
@@ -94,23 +111,21 @@
                                 - wearing masks? Y/N
                                 <br/>
                                 - comment
-                                <br/>
-                                - place {ref}
                             </div>
                         </div>
                     </div>
                 </foreignObject>
-                <text x="545" y="99" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">
-                    REPORT CARD...
+                <text x="545" y="159" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    REPORT CARD (MVP)...
                 </text>
             </switch>
         </g>
-        <path d="M 390 245 L 410 245 Q 420 245 420 235 L 420 203.75 Q 420 193.75 410 193.75 L 405 193.75 Q 400 193.75 400 183.75 L 400 152.5 Q 400 142.5 410 142.5 L 430 142.5" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
-        <path d="M 430 138.5 L 422 142.5 L 430 146.5" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
-        <path d="M 170 65 L 190 65 Q 200 65 209.96 64.13 L 390.04 48.37 Q 400 47.5 410 47.5 L 430 47.5" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
-        <path d="M 430 43.5 L 422 47.5 L 430 51.5" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
-        <path d="M 170 97.5 L 190 97.5 Q 200 97.5 200 107.5 L 200 170.46 Q 200 180.46 190 180.46 L 182.84 180.46 Q 175.68 180.46 175.68 190.46 L 175.68 253.43 Q 175.68 263.43 185.68 263.43 L 205.68 263.43" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
-        <path d="M 205.68 259.43 L 197.68 263.43 L 205.68 267.43" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 390 255 L 410 255 Q 420 255 420 245 L 420 239.38 Q 420 233.75 410 233.75 L 405 233.75 Q 400 233.75 400 223.75 L 400 218.13 Q 400 212.5 410 212.5 L 430 212.5" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 430 208.5 L 422 212.5 L 430 216.5" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 170 80 L 190 80 Q 200 80 209.96 80.87 L 390.04 96.63 Q 400 97.5 410 97.5 L 430 97.5" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 430 93.5 L 422 97.5 L 430 101.5" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 170 120 L 190 120 Q 200 120 200 130 L 200 190.6 Q 200 200.6 190 200.6 L 182.84 200.6 Q 175.68 200.6 175.68 210.6 L 175.68 271.19 Q 175.68 281.19 185.68 281.19 L 205.68 281.19" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 205.68 277.19 L 197.68 281.19 L 205.68 285.19" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
     </g>
     <switch>
         <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
