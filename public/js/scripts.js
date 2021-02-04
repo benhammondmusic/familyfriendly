@@ -28,6 +28,9 @@ function error() {
   status.textContent = 'Unable to retrieve your location';
 }
 
+/* 
+ STARTS HERE
+ */
 const status = document.querySelector('#geo-status');
 const geoDataEls = document.querySelectorAll('.geo-data');
 
