@@ -11,6 +11,7 @@ TODO!
 - extract parent PLACE when deleting REPORTCARD to properly redirect
 - save USER location and only have browser get it once
 - make repo public
+- better UI for report cards listing and making
 
 ICONS
 
