@@ -130,8 +130,9 @@ input {
   background-color: var(--ghost-white);
 }
 
-.list-box {
+.list-box ul li {
   background-color: var(--ghost-white);
+  border: 1px solid var(--space-cadet-2);
   border-radius: 15px;
 }
 

@@ -12,18 +12,13 @@ https://trello.com/b/y4dMEE1k/project-2
 
 TODO!
 
-- edit and delete report cards,
-- edit places.
-- limit delete places to authoring user.
+- change date display to full year
+- center design
+- stop map from going on top of nav bar
+- get city, country name to display on place info page
 - extract parent PLACE when deleting REPORTCARD to properly redirect
 - save USER location and only have browser get it once
 - make repo public
-- generate new API key once I've figured out how to hide it.
-- populate two levels deep. where did i need this?
-- import text sizing from website
-- finish nav bar
-- separate out js fn to reuse code for place/add
-- btn add report card while viewing single place in show
 
 ICONS
 
