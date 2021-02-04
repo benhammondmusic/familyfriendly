@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const ctrls = require('../controllers');
 
-/*  /reportCards */
+/*  /reportcards */
 
 // GET ALL REPORT CARDS
 router.get('/', ctrls.reportcards.index);
