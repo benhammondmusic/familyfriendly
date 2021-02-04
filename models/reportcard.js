@@ -26,4 +26,4 @@ const reportCardSchema = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model('ReportCard', reportCardSchema);
+module.exports = mongoose.model('Reportcard', reportCardSchema);
