@@ -5,7 +5,7 @@ require('dotenv').config();
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 
 // require('../models');
-const User = require('../models/user'); // ! fix to use index model
+const User = require('../models/User'); // ! fix to use index model
 // console.log(User, 'user model object');
 
 passport.use(

@@ -56,5 +56,5 @@ app.use('/places', routes.places); // ALL PLACE ROUTES, ADD REPORT CARD
 app.use('/reportcards', routes.reportCards); // VIEW ALL, DELETE, EDIT REPORT CARDS
 
 app.listen(port, () => {
-  console.log(`Family Friendly listening at http://localhost:${port}`);
+  console.log(`Family Friendly listening at port:${port}`);
 });

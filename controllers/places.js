@@ -1,6 +1,6 @@
 // database index which imports places, users, etc
 const db = require('../models');
-const { populate } = require('../models/user');
+const { populate } = require('../models/User');
 
 // GET - display MANY / ALL places
 const index = (req, res) => {
