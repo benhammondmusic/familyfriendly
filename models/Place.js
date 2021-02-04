@@ -7,10 +7,10 @@ const placeSchema = new mongoose.Schema(
       type: mongoose.Types.ObjectId,
       ref: 'User',
     },
-    reportCards: [
+    reportcards: [
       {
         type: mongoose.Types.ObjectId,
-        ref: 'ReportCard',
+        ref: 'Reportcard',
       },
     ],
     name: {

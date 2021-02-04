@@ -53,7 +53,7 @@ app.use((req, res, next) => {
 app.use('/', routes.index); // contains OAUTH routes
 app.use('/users', routes.users); // ALL USER ROUTES
 app.use('/places', routes.places); // ALL PLACE ROUTES, ADD REPORT CARD
-app.use('/reportcards', routes.reportCards); // VIEW ALL, DELETE, EDIT REPORT CARDS
+app.use('/reportcards', routes.reportcards); // VIEW ALL, DELETE, EDIT REPORT CARDS
 
 app.listen(port, () => {
   console.log(`Family Friendly listening at port:${port}`);

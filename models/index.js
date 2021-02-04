@@ -4,5 +4,5 @@ const mongoose = require('mongoose');
 module.exports = {
   User: require('./User'),
   Place: require('./Place'),
-  ReportCard: require('./Reportcard'),
+  Reportcard: require('./Reportcard'),
 };

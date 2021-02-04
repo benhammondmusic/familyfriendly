@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const reportCardSchema = new mongoose.Schema(
+const reportcardSchema = new mongoose.Schema(
   {
     authorUserId: {
       type: mongoose.Types.ObjectId,
@@ -26,4 +26,4 @@ const reportCardSchema = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model('Reportcard', reportCardSchema);
+module.exports = mongoose.model('Reportcard', reportcardSchema);

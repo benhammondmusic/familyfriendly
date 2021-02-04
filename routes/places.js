@@ -14,10 +14,10 @@ router.post('/', ctrls.places.create);
 router.get('/:id', ctrls.places.show);
 
 // DISPLAY FORM TO ADD NEW REPORT CARD FOR SPECIFIC PLACE
-router.get('/:id/reportcards/new', ctrls.reportCards.newReportCardForm);
+router.get('/:id/reportcards/new', ctrls.reportcards.newReportCardForm);
 
 // CREATE THE NEW REPORT CARD IN THE DB
-router.post('/:id/reportcards', ctrls.reportCards.create);
+router.post('/:id/reportcards', ctrls.reportcards.create);
 
 // DISPLAY PREFILLED FORM TO EDIT PLACE IN DB
 router.get('/:id/edit', ctrls.places.edit);

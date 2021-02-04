@@ -5,15 +5,15 @@ const db = require('../models');
 
 // get all existing report cards
 const index = (req, res) => {
-  db.ReportCard.find({}, (err, reportCards) => {
+  db.Reportcard.find({}, (err, reportcards) => {
     if (err) {
       console.log(err);
     }
     const context = {
-      reportCards,
+      reportcards,
       user: req.user,
     };
-    res.render('reportCards/index', context);
+    res.render('reportcards/index', context);
   });
 };
 
@@ -35,7 +35,7 @@ const create = (req, res) => {
   //   console.log(req.body);
 
   // create a new report card with req.body containing user form input
-  db.ReportCard.create(req.body, (err, createdReportCard) => {
+  db.Reportcard.create(req.body, (err, createdReportCard) => {
     if (err) return console.log(err);
 
     // set reportcard authorID to current logged in userID
@@ -49,7 +49,7 @@ const create = (req, res) => {
 
     db.Place.findById(req.params.id, (err, foundPlace) => {
       // add to PLACE document's array of REPORT CARDS
-      foundPlace.reportCards.push(createdReportCard);
+      foundPlace.reportcards.push(createdReportCard);
       foundPlace.save();
 
       // send logged in user and PLACE that just received the report card
@@ -67,7 +67,7 @@ const create = (req, res) => {
 
 // DELETE - destroy a REPORT CARD from the db
 const destroy = (req, res) => {
-  db.ReportCard.findByIdAndDelete(req.params.id, function (err, deletedReportCard) {
+  db.Reportcard.findByIdAndDelete(req.params.id, function (err, deletedReportCard) {
     if (err) console.log(err);
     else res.redirect(`/places/${deletedReportCard.place}`);
   });

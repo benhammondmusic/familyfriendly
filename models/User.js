@@ -22,10 +22,10 @@ const userSchema = new mongoose.Schema(
         ref: 'Place',
       },
     ],
-    authoredReportCards: [
+    authoredReportcards: [
       {
         type: mongoose.Types.ObjectId,
-        ref: 'ReportCard',
+        ref: 'Reportcard',
       },
     ],
   },

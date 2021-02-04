@@ -57,7 +57,7 @@ const show = (req, res) => {
   // retrieve this place
   db.Place.findById(req.params.id)
     // fill in report cards and other ref fields
-    .populate('reportCards')
+    .populate('reportcards')
     .exec(function (err, populatedPlace) {
       if (err) console.log(err);
       console.log('The populated place:', populatedPlace);

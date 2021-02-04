@@ -5,9 +5,9 @@ const ctrls = require('../controllers');
 /*  /reportCards */
 
 // GET ALL REPORT CARDS
-router.get('/', ctrls.reportCards.index);
+router.get('/', ctrls.reportcards.index);
 // DELETE A REPORT CARD
-router.delete('/:id', ctrls.reportCards.destroy);
+router.delete('/:id', ctrls.reportcards.destroy);
 
 // IMPORTED BY INDEX ROUTER WHICH IS READ BY SERVER JS
 module.exports = router;
