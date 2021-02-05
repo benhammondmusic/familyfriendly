@@ -16,7 +16,7 @@ My wife suggested building an app that would allow an overstressed parent to qui
 - Back-End: Node.js (EXPRESS, PASSPORT), MONGO DB ATLAS, MONGOOSE
 - APIs: Google OAuth2, Google Maps Javascript API
 - Development: Git, GitHub, VSCode, Draw.io, Trello
-- Resources: [Water.css](https://watercss.kognise.dev/), [Material Design Icons](http://google.github.io/material-design-icons/), https://fdossena.com/?p=html5cool/buttons/i.frag
+- Resources: [Water.css](https://watercss.kognise.dev/), [Material Design Icons](http://google.github.io/material-design-icons/), [Styling HTML Buttons](https://fdossena.com/?p=html5cool/buttons/i.frag), [Forcing HTTPS with Express / Heroku](https://jaketrent.com/post/https-redirect-node-heroku)
 
 ### GETTING STARTED
 
@@ -32,13 +32,15 @@ Please enable geolocation when prompted, and be sure the web address begins with
 
 ### NEXT STEPS
 
-- force https
 - add cards meta tags etc to html
 - change date display to full year
 - center design
-- stop map from going on top of nav bar
 - get city, country name to display on place info page
 - extract parent PLACE when deleting REPORTCARD to properly redirect
 - save USER location and only have browser get it once
 - make repo public
 - better UI for report cards listing and making
+- fix padding around report card li
+- Hide “your location “ msg
+- Spacing of header
+-
