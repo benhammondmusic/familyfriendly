@@ -12,6 +12,7 @@
 
 /* TYPE SIZING from type-scale.com */
 html {
+  box-sizing: border-box;
   font-size: 100%;
 } /*16px*/
 
@@ -27,6 +28,8 @@ body {
   width: 100%;
   /* padding: 20px; */
   margin-top: 0px;
+
+  /* margin: 0; */
   padding: 0px;
 }
 
@@ -75,6 +78,7 @@ small,
 
 .big {
   font-size: 1.602rem;
+  color: var(--space-cadet);
 }
 
 main {
@@ -82,6 +86,7 @@ main {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
+  text-align: center;
 
   /* prevent content from being covered by nav bar  */
   padding: 3em 1em;
@@ -98,14 +103,12 @@ nav {
   padding: 0px;
   margin: 0px;
   width: 100%;
-  /* border: 2px solid red; */
-
   position: fixed;
 }
 nav ul {
   list-style-type: none;
   margin: 0;
-  padding: 0.5em;
+  padding: 0.2em;
   width: 100%;
   display: flex;
   align-items: center;
@@ -197,9 +200,8 @@ button {
   /* display: inline-block; */
   background-color: var(--space-cadet-2);
   /* padding: 0.1em 0.1em; */
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
-  margin: 0 0.1em 0.1em 0;
+  padding: 0.2em;
+  margin: 0.1em;
   border: 0.1em solid var(--gunmetal);
   border-radius: 1em;
   box-sizing: border-box;
@@ -239,7 +241,8 @@ button:hover {
 }
 
 .danger {
-  background-color: darkred;
+  background-color: var(--lavender-blue);
+  color: var(--gunmetal);
   text-shadow: none;
 }
 

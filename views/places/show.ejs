@@ -8,18 +8,18 @@
       <div class="entry-controls">
         <!-- ADD REPORT CARD BUTTON  -->
         <form action="/places/<%=place._id%>/reportcards/new" method="GET">
-          <button title="Add A Report"><span class="material-icons"> thumbs_up_down </span> Add Report</button>
+          <button title="Add A Report"><span class="material-icons"> thumbs_up_down </span> <span class="show-on-big-screens">Add Report</span></button>
         </form>
         <!-- EDIT PLACE BUTTON  -->
         <form action="/places/<%=place._id%>/edit" method="GET">
-          <button title="Edit Place Details"><span class="material-icons"> edit_location_alt </span>Edit Place</button>
+          <button title="Edit Place Details"><span class="material-icons"> edit_location_alt </span> <span class="show-on-big-screens">Edit Place</span></button>
         </form>
 
         <!-- DELETE PLACE BUTTON  -->
         <!-- only available for authoring user  -->
         <% if (place.authorUserId.equals(user && user._id)) { %>
         <form action="/places/<%=place._id%>?_method=DELETE" method="POST">
-          <button class="danger" title="Delete Place"><span class="material-icons"> clear </span>Delete Place</button>
+          <button class="danger" title="Delete Place"><span class="material-icons"> clear </span> <span class="show-on-big-screens">Delete Place</span></button>
         </form>
         <% } %>
       </div>
@@ -47,7 +47,7 @@
         <span class="date"><%= reportcard.createdAt.toLocaleString('en-US',{year: 'numeric', month: 'short', day: 'numeric'}) %></span>
 
         <span class="material-icons"> baby_changing_station </span>
-        <%= reportcard.hasChangingTableW ? '(W)' : '' %> <%= reportcard.hasChangingTableM ? '(M)' : '' %>
+        <%= reportcard.hasChangingTableW ? 'Mens' : '' %> <%= reportcard.hasChangingTableM ? 'Womens' : '' %>
       </div>
       <div class="entry-controls">
         <!-- DELETE REPORT CARD BUTTON   -->

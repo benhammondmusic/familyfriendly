@@ -42,9 +42,9 @@
   <li><span class="nav-option">
     <% if (user) { %>
       <!-- hack  first name, would be better get directly from google profile -->
-      <a href="/logout">Log Out <%= user.name.split(' ')[0] %></a>
+      <a href="/logout">Logout <%= user.name.split(' ')[0] %></a>
     <% } else { %>
-      <a href="/auth/google">Log In</a>
+      <a href="/auth/google">Login</a>
       <% } %>
     </span></li>
 </ul>
