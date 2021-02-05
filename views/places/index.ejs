@@ -68,10 +68,10 @@
   });
 
   // initialize userLocation to default lat/lng. set later to accurate geolcation if possible
-  let userLocation = { lat: 45, lng: -90 };
+  let userLocation = { lat: 43, lng: -50 };
 
   if (!navigator.geolocation) {
-    status.textContent = 'Geolocation is not supported by your browser.';
+    status.textContent = 'Geolocation not supported. Try a different browser.';
     // call map with default user position if not supported
     initMap(userLocation, mapPlaces);
   } else {
