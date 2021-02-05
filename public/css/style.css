@@ -121,6 +121,8 @@ nav ul li a:hover:not(.active) {
 
 form {
   display: inline-block;
+  margin: 0px;
+
   /* flex-direction: row; */
   /* flex-wrap: nowrap; */
   /* justify-items: center; */
@@ -129,11 +131,16 @@ form {
 input {
   background-color: var(--ghost-white);
 }
+.list-box {
+  width: 40vw;
+  min-width: 200px;
+}
 
 .list-box ul li {
   background-color: var(--ghost-white);
   border: 1px solid var(--space-cadet-2);
   border-radius: 15px;
+  padding: 1em;
 }
 
 ul {

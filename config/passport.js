@@ -21,11 +21,11 @@ passport.use(
         if (err) return cb(err);
         // if found, return user object
         if (user) {
-          console.log('found existing user: ', user);
+          console.log('found existing user');
           return cb(null, user);
         } else {
           // we have a new user via OAuth!
-          console.log('adding new user: ', user);
+          console.log('adding new user: ');
           const newUser = new User({
             name: profile.displayName,
             email: profile.emails[0].value,

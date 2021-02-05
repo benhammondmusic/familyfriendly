@@ -8,6 +8,8 @@ My wife suggested building an app that would allow an overstressed parent to qui
 
 ### SCREENSHOTS
 
+![Mobile Screenshot](./mobile-screenshot.jpg 'Initial Deploy - Mobile Screenshot')
+
 ### TECH USED
 
 - Front-End: HTML, CSS, Javascript
@@ -18,7 +20,7 @@ My wife suggested building an app that would allow an overstressed parent to qui
 
 ### GETTING STARTED
 
-Site should load in any modern browser but was developed using Chrome. The layout is designed primarily for mobile, since parents will be using the app on the go. User must enable geolocation when asked to view their location on the map.
+Please enable geolocation when prompted, and be sure the web address begins with HTTPS. Development was done in Google Chrome.
 
 - Launch [Family Friendly](https://benhammond-familyfriendly.herokuapp.com)
 - View [GitHub Repo](https://github.com/benhammondmusic/familyfriendly)
@@ -29,3 +31,14 @@ Site should load in any modern browser but was developed using Chrome. The layou
 ![ERD](./erd.drawio.svg 'Entity Relationship Diagram')
 
 ### NEXT STEPS
+
+- force https
+- add cards meta tags etc to html
+- change date display to full year
+- center design
+- stop map from going on top of nav bar
+- get city, country name to display on place info page
+- extract parent PLACE when deleting REPORTCARD to properly redirect
+- save USER location and only have browser get it once
+- make repo public
+- better UI for report cards listing and making

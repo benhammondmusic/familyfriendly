@@ -1,7 +1,3 @@
-<script defer src="/js/scripts.js"></script>
-<!-- MAP API -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2CGd_TVDT97bT076IBQWpm3h3gFtZGJM&&libraries=&v=weekly"></script>
-
 <%- include('../partials/top.ejs', {user: user}) %>
 
 <small id="geo-status"></small>
@@ -14,10 +10,6 @@
 <h4>All Places</h4>
 <div class="list-box">
   <ul>
-    <!--  -->
-    <%=console.log("PLACES[]", places)%>
-    <!--  -->
-    <%=console.log("USER", user)%>
     <!--  -->
 
     <% places.forEach((place) => { %>
@@ -51,5 +43,45 @@
     <% }) %>
   </ul>
 </div>
+
+<!-- LOAD GEO LOCATION success() and error() FUNCTIONS  -->
+<script src="/js/scripts.js"></script>
+<!-- LOAD GOOGLE MAPS FUNCTIONS (called from scripts.js) -->
+<script src="/js/maps.js"></script>
+
+<!-- GOOGLE MAPS API -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2CGd_TVDT97bT076IBQWpm3h3gFtZGJM&&libraries=&v=weekly"></script>
+<script defer>
+  const status = document.querySelector('#geo-status');
+  const geoDataEls = document.querySelectorAll('.geo-data');
+
+  // create new array of place lat/lng based off array of data elements containg the same
+  const mapPlaces = [...geoDataEls].map((el) => {
+    const latLng = {};
+    const location = {};
+    latLng.lat = parseFloat(el.dataset.lat);
+    latLng.lng = parseFloat(el.dataset.lng);
+    location.latLng = latLng;
+    location.title = el.dataset.name;
+
+    return location;
+  });
+
+  // initialize userLocation to default lat/lng. set later to accurate geolcation if possible
+  let userLocation = { lat: 45, lng: -90 };
+
+  if (!navigator.geolocation) {
+    status.textContent = 'Geolocation is not supported by your browser.';
+    // call map with default user position if not supported
+    initMap(userLocation, mapPlaces);
+  } else {
+    status.textContent = 'Locating…';
+    console.log('1');
+    // success() sets userLocation and calls initMap()
+    // error() keeps default userLocation and calls initMaps
+    navigator.geolocation.getCurrentPosition(success, error);
+    console.log('2');
+  }
+</script>
 
 <%- include('../partials/bottom.ejs') %>

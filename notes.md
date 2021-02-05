@@ -2,17 +2,6 @@ https://trello.com/b/y4dMEE1k/project-2
 
 TODO!
 
-- force https
-- add cards meta tags etc to html
-- change date display to full year
-- center design
-- stop map from going on top of nav bar
-- get city, country name to display on place info page
-- extract parent PLACE when deleting REPORTCARD to properly redirect
-- save USER location and only have browser get it once
-- make repo public
-- better UI for report cards listing and making
-
 ICONS
 
 <!-- ! use these for user ratings -->

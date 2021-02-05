@@ -60,7 +60,7 @@ const show = (req, res) => {
     .populate('reportcards')
     .exec(function (err, populatedPlace) {
       if (err) console.log(err);
-      console.log('The populated place:', populatedPlace);
+      // console.log('The populated place:', populatedPlace);
       // create context to send containing current User and populated place
       const context = {
         user: req.user,
@@ -77,7 +77,7 @@ const edit = (req, res) => {
     // callback fn to add with user to context object
     .then((placeToEdit) => {
       const context = { user: req.user, place: placeToEdit };
-      console.log(context, 'context');
+      // console.log(context, 'context');
       // send along to EDIT FORM page
       res.render('places/edit', context);
     })
@@ -90,7 +90,7 @@ const update = (req, res) => {
   db.Place.findByIdAndUpdate(req.params.id, req.body)
     // callback fn to add with user to context object
     .then((updatedPlace) => {
-      console.log(updatedPlace);
+      // console.log(updatedPlace);
       res.redirect(`/places/${updatedPlace._id}`);
     })
     .catch((err) => console.log(err));
