@@ -19,7 +19,7 @@ body {
   background: white;
   font-family: 'Nunito', sans-serif;
   font-weight: 400;
-  line-height: 1.75;
+  /* line-height: 1.75; */
   color: var(--gunmetal);
 }
 
@@ -85,7 +85,7 @@ nav {
   background-color: var(--space-cadet);
   padding: 0px;
   margin: 0px;
-  width: 100vw;
+  width: 100%;
   /* border: 2px solid red; */
 
   position: fixed;
@@ -93,7 +93,7 @@ nav {
 nav ul {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 0.5em;
   width: 100%;
   display: flex;
   align-items: center;
@@ -107,7 +107,7 @@ nav ul {
 
 nav ul li {
   /* float: left; */
-  padding: 0.5em 1em 0.5em 1em;
+  padding: 0.1em 1em 0.1em 1em;
 }
 
 nav ul li a {
