@@ -33,14 +33,6 @@ Please enable geolocation when prompted, and be sure the web address begins with
 ### NEXT STEPS
 
 - add cards meta tags etc to html
-- change date display to full year
-- center design
 - get city, country name to display on place info page
-- extract parent PLACE when deleting REPORTCARD to properly redirect
 - save USER location and only have browser get it once
 - make repo public
-- better UI for report cards listing and making
-- fix padding around report card li
-- Hide “your location “ msg
-- Spacing of header
--
