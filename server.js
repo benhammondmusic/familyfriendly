@@ -25,6 +25,15 @@ app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 app.use(express.json());
 
+// FORCE HTTPS when in production, but not on localhost
+// https://jaketrent.com/post/https-redirect-node-heroku
+if (process.env.NODE_ENV === 'production') {
+  app.use((req, res, next) => {
+    if (req.header('x-forwarded-proto') !== 'https') res.redirect(`https://${req.header('host')}${req.url}`);
+    else next();
+  });
+}
+
 // FOR OAUTH
 app.use(
   session({
