@@ -72,7 +72,15 @@ body {
 }
 
 main {
-  padding: 5em 1em;
+  /* prevent content from being covered by nav bar  */
+  padding: 3em 1em;
+}
+
+/* Use a media query to add a breakpoint at 600px: */
+@media screen and (max-width: 600px) {
+  main {
+    padding: 6em 1em; /* more padding to make sure text is in view when the viewport is 600px or smaller */
+  }
 }
 
 .material-icons {
