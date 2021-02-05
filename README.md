@@ -16,7 +16,14 @@ My wife suggested building an app that would allow an overstressed parent to qui
 - Back-End: Node.js (EXPRESS, PASSPORT), MONGO DB ATLAS, MONGOOSE
 - APIs: Google OAuth2, Google Maps Javascript API
 - Development: Git, GitHub, VSCode, Draw.io, Trello
-- Resources: [Water.css](https://watercss.kognise.dev/), [Material Design Icons](http://google.github.io/material-design-icons/), [Styling HTML Buttons](https://fdossena.com/?p=html5cool/buttons/i.frag), [Forcing HTTPS with Express / Heroku](https://jaketrent.com/post/https-redirect-node-heroku)
+
+### RESOURCES
+
+- [Water.css](https://watercss.kognise.dev/)
+- [Material Design Icons](http://google.github.io/material-design-icons/)
+- [Styling HTML Buttons](https://fdossena.com/?p=html5cool/buttons/i.frag)
+- [Forcing HTTPS with Express / Heroku](https://jaketrent.com/post/https-redirect-node-heroku)
+- [Royalty Free Images](pngtree.com)
 
 ### GETTING STARTED
 
@@ -32,7 +39,9 @@ Please enable geolocation when prompted, and be sure the web address begins with
 
 ### NEXT STEPS
 
-- add cards meta tags etc to html
-- get city, country name to display on place info page
-- save USER location and only have browser get it once
-- make repo public
+- Choose an existing place (from Google Places API?) for user to report.
+- Add meta tags etc to html.
+- Display city, country name list of places.
+- Save a user's last known location, and default to that. Only use geolocation once or when user requests an update.
+- Make repo public.
+- More report options: Parking, Seating, Breastfeeding Room, Play Area, Stroller Friendly, etc.
