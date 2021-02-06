@@ -41,6 +41,8 @@ My wife suggested building an app that would allow an overstressed parent to qui
 ![Initial Wireframe](./docs/wireframe.jpg 'Initial Wireframe - Main Page')
 ![ERD](./docs/erd.drawio.svg 'Entity Relationship Diagram')
 
+- [Trello Board](https://trello.com/b/y4dMEE1k/project-2)
+
 ### POTENTIAL FURTHER DEVELOPMENT
 
 - Choose an existing place (from Google Places API?) for user to report.
