@@ -46,8 +46,13 @@
       <div class="entry-info">
         <span class="date"><%= reportcard.createdAt.toLocaleString('en-US',{year: 'numeric', month: 'short', day: 'numeric'}) %></span>
 
-        <span class="material-icons"> baby_changing_station </span>
-        <%= reportcard.hasChangingTableW ? 'Mens' : '' %> <%= reportcard.hasChangingTableM ? 'Womens' : '' %>
+        <!-- icon for womens room  -->
+        <% if (reportcard.hasChangingTableW) { %>
+        <span style="color: purple" class="entry-icon"> <span class="material-icons"> baby_changing_station </span>W</span><% } %>
+
+        <!-- icon for mens room  -->
+        <% if (reportcard.hasChangingTableM) { %>
+        <span style="color: #003399" class="entry-icon"> <span class="material-icons"> baby_changing_station </span>M</span> <% } %>
       </div>
       <div class="entry-controls">
         <!-- DELETE REPORT CARD BUTTON   -->

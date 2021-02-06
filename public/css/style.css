@@ -95,6 +95,7 @@ main {
 .material-icons {
   vertical-align: middle;
   font-size: 1em !important;
+  padding: 0.1em;
 }
 
 /* NAV STYLES  */
@@ -152,6 +153,16 @@ form {
   /* justify-items: center; */
 }
 
+.splash {
+  padding: 3em;
+}
+
+form #add-report-card {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
 input {
   background-color: var(--ghost-white);
 }
@@ -164,8 +175,8 @@ input {
 
 .list-box ul li {
   background-color: var(--ghost-white);
-  border-top: 1px dashed var(--space-cadet-2);
-  /* border-radius: 15px; */
+  border-top: 5px dashed white;
+  border-radius: 5px;
   padding: 1em;
   display: flex;
   justify-content: space-between;
@@ -198,7 +209,7 @@ ul {
 
 button {
   /* display: inline-block; */
-  background-color: var(--space-cadet-2);
+  background-color: white;
   /* padding: 0.1em 0.1em; */
   padding: 0.2em;
   margin: 0.1em;
@@ -207,7 +218,7 @@ button {
   box-sizing: border-box;
   text-decoration: none;
   /* font-family: 'Roboto', sans-serif; */
-  color: ghostwhite;
+  color: var(--space-cadet-2);
   text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
   /* text-align: center; */
   transition: all 0.2s;
@@ -238,6 +249,10 @@ button:hover {
 .entry-header {
   background-color: var(--ghost-white);
   border-top: none;
+}
+
+.entry-icon {
+  font-size: 2.6em;
 }
 
 .danger {

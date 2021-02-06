@@ -1,5 +1,5 @@
 <%- include('../partials/top.ejs') %>
-<small id="geo-status"></small>
+
 <h2>Add A New Place</h2>
 
 <!-- ADD A PLACE FORM -->
@@ -7,6 +7,7 @@
   <div>
     <label for="name">Place Name:</label>
     <input name="name" id="name" placeholder="e.g. Starbucks" />
+
     <label for="name">Latitude:</label>
     <input type="text" id="latitude" name="latitude" />
     <label for="name">Longitude:</label>
@@ -17,6 +18,7 @@
     <button>Add Place</button>
   </div>
 </form>
+<small id="geo-status"></small>
 
 <script>
   // get users GEO location

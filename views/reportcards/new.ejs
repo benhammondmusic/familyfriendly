@@ -2,8 +2,8 @@
 <h2>Add Report Card: <%= place.name%></h2>
 <hr />
 <!-- ADD A REPORT CARD FORM -->
-<div class="list-box">
-  <form action="/places/<%=place._id%>/reportcards/" method="POST">
+<div>
+  <form id="add-report-card" action="/places/<%=place._id%>/reportcards/" method="POST">
     <ul>
       <!-- <li>
         <input type="checkbox" id="hasPotty" name="hasPotty" value="true" />

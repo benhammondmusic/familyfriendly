@@ -2,8 +2,15 @@
 <h1>Family Friendly</h1>
 <h4>Crowdsourced map of baby changing tables, for caretakers of all genders.</h4>
 
-<img src="./images/baby.png" alt="baby from pngtree" />
+<img class="splash" src="./images/baby.png" alt="baby from pngtree" />
 
-<small>Initial concept by Julie Hammond. <br />Development by Ben Hammond.</small>
+<div class="entry-controls">
+  <!-- VIEW PLACES  BUTTON  -->
+  <form action="/places" method="GET">
+    <button class="danger" title="View Places"><span class="material-icons"> map </span><span>View List of Places</span></button>
+  </form>
+</div>
+
+<em class="splash tiny">Initial concept by Julie Hammond. <br />Development by Ben Hammond.</em>
 
 <%- include('../partials/bottom.ejs') %>
