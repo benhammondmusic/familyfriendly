@@ -17,11 +17,13 @@ html {
 } /*16px*/
 
 body {
-  background: white;
+  background-image: url(../images/bg.jpg);
+  /* background: white; */
   font-family: 'Nunito', sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   /* line-height: 1.75; */
-  color: var(--gunmetal);
+  /* color: var(--gunmetal); */
+  color: var(--space-cadet);
   display: flex;
   flex-flow: column wrap;
   align-items: center;
@@ -35,6 +37,7 @@ body {
 
 p {
   margin-bottom: 1rem;
+  color: var(--space-cadet);
 }
 
 h1,
@@ -44,8 +47,9 @@ h4,
 h5 {
   margin: 1.3rem 0 1.38rem;
   font-family: 'Nunito', sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.3;
+  color: var(--space-cadet);
 }
 
 h1 {
@@ -81,7 +85,15 @@ small,
   color: var(--space-cadet);
 }
 
+.bubble {
+  background: rgba(255, 255, 255, 0.8);
+  /* background-color: white; */
+  border-radius: 15px;
+}
+
 main {
+  /* background-color: white; */
+
   width: 100%;
   display: flex;
   flex-flow: column wrap;
@@ -265,13 +277,17 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2em;
+  padding: 1em;
 }
 
-/* Use a media query to add a breakpoint at 600px: */
+/* Use a media query to add a breakpoint: 600px or smaller */
 @media screen and (max-width: 600px) {
   main {
-    padding: 6em 1em; /* more padding to make sure text is in view when the viewport is 600px or smaller */
+    padding: 6em 1em; /* more padding to make sure text is in view  */
+  }
+  nav ul li {
+    padding-left: 0.5em;
+    font-size: 0.889rem;
   }
   .show-on-big-screens {
     display: none;

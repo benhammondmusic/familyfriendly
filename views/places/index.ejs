@@ -1,11 +1,14 @@
 <%- include('../partials/top.ejs', {user: user}) %>
 
-<small id="geo-status"></small>
+<small id="geo-status" class="bubble"></small>
 
 <!-- display MAP showing ALL PLACES and USER LOCATION -->
 <div id="map"></div>
 
-<a href="/places/new"><span class="material-icons"> add_location_alt </span>Add A New Place</a>
+<% if (user) { %>
+<a href="/places/new" class="bubble"> <span class="material-icons"> add_location_alt </span>Add A New Place </a>
+<% } else { %>
+<a href="/auth/google" class="bubble"> Login with Google</a> to add a place <% } %>
 
 <div class="list-box">
   <ul>
@@ -24,18 +27,24 @@
       </div>
 
       <div class="entry-controls">
+        <% if (user) { %>
         <!-- ADD REPORT  BUTTON  -->
+        <!-- only available when signed in   -->
         <form action="/places/<%=place._id%>/reportcards/new" method="GET">
           <button title="Grade This Place"><span class="material-icons"> thumbs_up_down </span><span class="show-on-big-screens">Add Report</span></button>
         </form>
 
         <!-- EDIT PLACE BUTTON  -->
+        <!-- only available when signed in  -->
         <form action="/places/<%=place._id%>/edit" method="GET">
           <button title="Edit Place Details"><span class="material-icons"> edit_location_alt </span><span class="show-on-big-screens">Edit Place</span></button>
         </form>
+        <% } else { %>
+        <small><a href="/auth/google">Login with Google</a> to report a changing table</small>
+        <% } %>
 
         <!-- DELETE PLACE BUTTON  -->
-        <!-- only available for authoring user  -->
+        <!-- only available when signed in as authoring user  -->
         <% if (place.authorUserId._id.equals(user && user._id)) { %>
         <form action="/places/<%=place._id%>?_method=DELETE" method="POST">
           <button class="danger" title="Delete Place"><span class="material-icons"> clear </span><span class="show-on-big-screens">Delete Place</span></button>
@@ -79,11 +88,9 @@
     initMap(userLocation, mapPlaces);
   } else {
     status.textContent = 'Locating…';
-    console.log('1');
     // success() sets userLocation and calls initMap()
     // error() keeps default userLocation and calls initMaps
     navigator.geolocation.getCurrentPosition(success, error);
-    console.log('2');
   }
 </script>
 

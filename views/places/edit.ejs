@@ -1,11 +1,11 @@
 <%- include('../partials/top.ejs') %>
-<small id="geo-status"></small>
-<h2>Update <%=place.name%></h2>
-<div class="date"><span>Created: <%=place.createdAt.toLocaleString('en-US',{year: 'numeric', month: 'short', day: 'numeric'}) %></span> <span>Last Updated: <%=place.updatedAt.toLocaleString('en-US',{year: 'numeric', month: 'short', day: 'numeric'}) %></span></div>
+<small class="bubble" id="geo-status"></small>
+<h2 class="bubble">Update <%=place.name%></h2>
+<div class="date bubble"><span>Created: <%=place.createdAt.toLocaleString('en-US',{year: 'numeric', month: 'short', day: 'numeric'}) %></span> <span>Last Updated: <%=place.updatedAt.toLocaleString('en-US',{year: 'numeric', month: 'short', day: 'numeric'}) %></span></div>
 
 <!-- ADD A PLACE FORM -->
-<form action="/places/<%=place._id%>?_method=PATCH" method="POST">
-  <div>
+<form class="bubble" action="/places/<%=place._id%>?_method=PATCH" method="POST">
+  <div class="bubble">
     <label for="name">Place Name:</label>
     <input name="name" id="name" value="<%=place.name%>" />
     <label for="name">Latitude:</label>
@@ -15,7 +15,7 @@
   </div>
 
   <div>
-    <button>Update Place</button>
+    <button class="danger">Update Place</button>
   </div>
 </form>
 

@@ -1,9 +1,9 @@
 <%- include('../partials/top.ejs') %>
 
-<h2>Add A New Place</h2>
+<h2 class="bubble">Add A New Place</h2>
 
 <!-- ADD A PLACE FORM -->
-<form action="/places" method="POST">
+<form class="bubble" action="/places" method="POST">
   <div>
     <label for="name">Place Name:</label>
     <input name="name" id="name" placeholder="e.g. Starbucks" />
@@ -15,10 +15,10 @@
   </div>
 
   <div>
-    <button>Add Place</button>
+    <button class="danger">Add Place</button>
   </div>
 </form>
-<small id="geo-status"></small>
+<small class="bubble" id="geo-status"></small>
 
 <script>
   // get users GEO location

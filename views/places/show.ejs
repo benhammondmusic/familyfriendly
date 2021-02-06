@@ -6,6 +6,8 @@
     <li>
       <div class="entry-info"><h2><%=place.name%></h2></div>
       <div class="entry-controls">
+        <!-- only available when logged in  -->
+        <% if (user) { %>
         <!-- ADD REPORT CARD BUTTON  -->
         <form action="/places/<%=place._id%>/reportcards/new" method="GET">
           <button title="Add A Report"><span class="material-icons"> thumbs_up_down </span> <span class="show-on-big-screens">Add Report</span></button>
@@ -14,6 +16,8 @@
         <form action="/places/<%=place._id%>/edit" method="GET">
           <button title="Edit Place Details"><span class="material-icons"> edit_location_alt </span> <span class="show-on-big-screens">Edit Place</span></button>
         </form>
+        <% } else { %>
+        <a href="/auth/google" class="bubble"> Login with Google</a> to edit place and add a report <% } %>
 
         <!-- DELETE PLACE BUTTON  -->
         <!-- only available for authoring user  -->
@@ -70,8 +74,40 @@
 <!-- display MAP showing THIS PLACE and USER LOCATION -->
 <div id="map"></div>
 
-<script defer src="/js/scripts.js"></script>
+<script src="/js/scripts.js"></script>
+<script src="/js/maps.js"></script>
 <!-- MAP API -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2CGd_TVDT97bT076IBQWpm3h3gFtZGJM&&libraries=&v=weekly"></script>
+
+<script defer>
+  const status = document.querySelector('#geo-status');
+  const geoDataEls = document.querySelectorAll('.geo-data');
+
+  // create new array of place lat/lng based off array of data elements containg the same
+  const mapPlaces = [...geoDataEls].map((el) => {
+    const latLng = {};
+    const location = {};
+    latLng.lat = parseFloat(el.dataset.lat);
+    latLng.lng = parseFloat(el.dataset.lng);
+    location.latLng = latLng;
+    location.title = el.dataset.name;
+
+    return location;
+  });
+
+  // initialize userLocation to default lat/lng. set later to accurate geolcation if possible
+  let userLocation = { lat: 43, lng: -50 };
+
+  if (!navigator.geolocation) {
+    status.textContent = 'Geolocation not supported. Try a different browser.';
+    // call map with default user position if not supported
+    initMap(userLocation, mapPlaces);
+  } else {
+    status.textContent = 'Locating…';
+    // success() sets userLocation and calls initMap()
+    // error() keeps default userLocation and calls initMaps
+    navigator.geolocation.getCurrentPosition(success, error);
+  }
+</script>
 
 <%- include('../partials/bottom.ejs') %>

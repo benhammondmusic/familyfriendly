@@ -1,9 +1,8 @@
 <%- include('../partials/top.ejs') %>
-<h2>Add Report Card: <%= place.name%></h2>
-<hr />
+<h2 class="bubble">Add Report Card: <%= place.name%></h2>
 <!-- ADD A REPORT CARD FORM -->
-<div>
-  <form id="add-report-card" action="/places/<%=place._id%>/reportcards/" method="POST">
+<div class="bubble">
+  <form class="bubble" id="add-report-card" action="/places/<%=place._id%>/reportcards/" method="POST">
     <ul>
       <!-- <li>
         <input type="checkbox" id="hasPotty" name="hasPotty" value="true" />
@@ -44,7 +43,7 @@
     </div> -->
 
     <div>
-      <button>Submit Report</button>
+      <button class="danger">Submit Report</button>
     </div>
   </form>
 </div>
