@@ -34,7 +34,7 @@ My wife suggested building an app that would allow an overstressed parent to qui
 - [Material Design Icons](http://google.github.io/material-design-icons/)
 - [Styling HTML Buttons](https://fdossena.com/?p=html5cool/buttons/i.frag)
 - [Forcing HTTPS with Express / Heroku](https://jaketrent.com/post/https-redirect-node-heroku)
-- [PNG Tree](pngtree.com) - Royalty Free Images
+- [PNG Tree](pngtree.com) and [Toptal](https://www.toptal.com/designers/subtlepatterns/) - Royalty Free Images
 
 ### DEVELOPMENT
 
