@@ -10,23 +10,23 @@ My wife suggested building an app that would allow an overstressed parent to qui
 
 ##### Mobile
 
-![Screenshot](./docs/mobile-splash.jpg 'Screenshot')
-![Screenshot](./docs/mobile-reports.jpg 'Screenshot')
+![Screenshot](./docs/mobile-splash.jpg 'Mobile Screenshot')
+![Screenshot](./docs/mobile-reports.jpg 'Mobile Screenshot')
 
 ##### Desktop (Logged Out)
 
-![Screenshot](./docs/desktop-list-loggedout.png 'Screenshot')
+![Screenshot](./docs/desktop-list-loggedout.png 'Desktop Screenshot')
 
 ##### Desktop (Logged In Google OAuth)
 
-![Screenshot](./docs/desktop-list.png 'Screenshot')
+![Screenshot](./docs/desktop-list.png 'Desktop Screenshot')
 
-### TECH USED
+### TECH
 
-- Front-End: HTML, CSS, Javascript
-- Back-End: Node.js (EXPRESS, PASSPORT), MONGO DB ATLAS, MONGOOSE
+- Front-End: HTML, CSS, Javascript, EJS
+- Back-End: Node.js (Express, Passport), MongoDB Atlas, Mongoose
 - APIs: Google OAuth2, Google Maps Javascript API
-- Development: Git, GitHub, VSCode, Draw.io, Trello
+- Development: Git, GitHub, VSCode, Prettier, Draw.io, Trello
 
 ### RESOURCES
 
