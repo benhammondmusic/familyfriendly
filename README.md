@@ -8,7 +8,18 @@ My wife suggested building an app that would allow an overstressed parent to qui
 
 ### SCREENSHOTS
 
-![Mobile Screenshot](./mobile-screenshot.jpg 'Initial Deploy - Mobile Screenshot')
+##### Mobile
+
+![Screenshot](./docs/mobile-splash.jpg 'Screenshot')
+![Screenshot](./docs/mobile-reports.jpg 'Screenshot')
+
+##### Desktop (Logged Out)
+
+![Screenshot](./docs/desktop-list-loggedout.png 'Screenshot')
+
+##### Desktop (Logged In Google OAuth)
+
+![Screenshot](./docs/desktop-list.png 'Screenshot')
 
 ### TECH USED
 
@@ -23,25 +34,25 @@ My wife suggested building an app that would allow an overstressed parent to qui
 - [Material Design Icons](http://google.github.io/material-design-icons/)
 - [Styling HTML Buttons](https://fdossena.com/?p=html5cool/buttons/i.frag)
 - [Forcing HTTPS with Express / Heroku](https://jaketrent.com/post/https-redirect-node-heroku)
-- [Royalty Free Images](pngtree.com)
+- [PNG Tree](pngtree.com) - Royalty Free Images
+
+### DEVELOPMENT
+
+![Initial Wireframe](./docs/wireframe.jpg 'Initial Wireframe - Main Page')
+![ERD](./docs/erd.drawio.svg 'Entity Relationship Diagram')
+
+### POTENTIAL FURTHER DEVELOPMENT
+
+- Choose an existing place (from Google Places API?) for user to report.
+- Add meta tags etc to html.
+- Display city and country name in list of places.
+- Save a user's last known location, and default to that. Only use geolocation once or when user requests an update.
+- More report options: Parking, Seating, Breastfeeding Room, Play Area, Stroller Friendly, etc.
+- Filter mapped results based on caregiver and child needs.
 
 ### GETTING STARTED
 
 Please enable geolocation when prompted, and be sure the web address begins with HTTPS. Development was done in Google Chrome.
 
-- Launch [Family Friendly](https://benhammond-familyfriendly.herokuapp.com)
 - View [GitHub Repo](https://github.com/benhammondmusic/familyfriendly)
-
-### DEVELOPMENT
-
-![Initial Wireframe](./wireframe.jpg 'Initial Wireframe - Main Page')
-![ERD](./erd.drawio.svg 'Entity Relationship Diagram')
-
-### NEXT STEPS
-
-- Choose an existing place (from Google Places API?) for user to report.
-- Add meta tags etc to html.
-- Display city, country name list of places.
-- Save a user's last known location, and default to that. Only use geolocation once or when user requests an update.
-- Make repo public.
-- More report options: Parking, Seating, Breastfeeding Room, Play Area, Stroller Friendly, etc.
+- Launch [Family Friendly](https://benhammond-familyfriendly.herokuapp.com)
