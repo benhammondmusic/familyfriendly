@@ -186,8 +186,8 @@ input {
 }
 
 .list-box ul li {
-  background-color: var(--ghost-white);
-  border-top: 5px dashed white;
+  background-color: white;
+  border-top: 5px dashed var(--ghost-white);
   border-radius: 5px;
   padding: 1em;
   display: flex;
@@ -221,7 +221,7 @@ ul {
 
 button {
   /* display: inline-block; */
-  background-color: white;
+  background-color: var(--ghost-white);
   /* padding: 0.1em 0.1em; */
   padding: 0.2em;
   margin: 0.1em;
